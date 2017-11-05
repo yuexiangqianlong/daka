@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>日报系统索维智能学院</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+   <script src="http://libs.baidu.com/jquery/2.1.4/jquery.js"></script>
+   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <style>
+        .headStyle{
+             height: 2.5em;
+             margin-top:6px;
+        }
+   </style>
+   <script>
+     function backs(){
+       location.href="./Assistant"
+     }
+   </script>
+   <body>
+   <div class="table-responsive">
+    <button type="button" onclick="backs()" style="margin-left: 90%" class="btn btn-primary">返回</button>
+  <table class="table table-bordered" style="width: 75%;margin-left: 10%">
+      <caption>学生答题情况表</caption>
+      
+         <thead>
+        <tr>
+          <th style="text-align: center;font-size: 3em">建议</th>
+           <th style="text-align: center;font-size: 3em">时间</th>
+        </tr>
+      </thead> 
+      <%rs.forEach(function(row){ %>
+      <%if(row.id==6){%>
+      <%if(row.text!=null){%>
+       <tbody> 
+        <td style="text-align: center;font-size: 1em"><%-row.text%></td>
+        <td style="text-align: center;font-size: 1em"><%-youWant%></td>
+       </tbody>
+        <%}%>
+        <%}%>
+        <%})%>
+    </table>
+    </div>
+</body>
+</html>

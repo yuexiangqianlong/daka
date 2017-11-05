@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>日报系统索维智能学院</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+   <script src="http://libs.baidu.com/jquery/2.1.4/jquery.js"></script>
+   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script>
+  function delect(id){
+   if(confirm('确定删除吗?')){
+    $.get('./adminDelect?topic='+id,function(data){
+        alert("删除成功");
+         $('#body').html(data);
+    })
+  }
+
+  };
+  function Deleteall(topic){
+   if(confirm('确定删除吗?')){
+    $.get('./adminAll?topic='+topic,function(data){
+        alert("删除成功");
+         $('#body').html(data);
+    })
+  }
+
+  }
+ </script>
+ <body style='background-color: #9C9C9C'>
+ <table class="table">
+      <caption>学生答题情况表</caption><a href="./adminList"><button type="button" class="btn btn-danger">返回</button></a> 
+      <thead>
+        <tr>
+          <th>题号</th>
+          <th>问题</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+        <tr>
+        <td id="topic">第六题</td>
+        <td id="problem">请在下面写出你对今天所讲的知识点不理解的地方，或者你对老师的建议</td>
+        <td><button type="button" onclick="Deleteall(<%-rs[0].topic%>)" class="btn btn-primary">全部删除</button></td>
+        <%rs.forEach(function(item){%>
+        <tr><td>意见:<%-item.text%></td>
+          <td></td>
+          <td><button type="button" onclick="delect(<%-item.id%>)" class="btn btn-primary">删除</button></td></tr> 
+        <%})%>
+        </tr>
+        <tr> 
+         <% page=parseInt(page)%>
+           <td colspan="4" align="center">
+           <!-- 转译page他是字符串型 -->
+            <ul class=" pagination ">
+            <li><a href="">共<%-rowCount%>条消息</a></li>
+             <li><a href=""> 第<%-page%>/<%-sumpage%>页</a></li>
+              <%if(page>1){%>
+             <li><a href="./adminText?page=1&topic=6">首页</a></li>
+             <li><a href="./adminText?page=<%-page-1%>&topic=6">上一页</a></li>
+             <%}%>
+             <%if(page<sumpage){%>
+            
+             <li><a href="./adminText?page=<%-page+1%>&topic=6">下一页</a></li>
+              <li><a href="./adminText?page=<%-sumpage%>&topic=6">尾页</a></li>
+             
+             <%}%>
+            
+             <% for(i=1;i<=sumpage;i++){ %>
+            <li><a href='./adminText?page=<%-i%>&topic=6'><%-i%></a></li>
+
+          <% } %> 
+    </table>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>日报系统索维智能学院</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+   <script src="/javascripts/jquery-2.1.4.min.js"></script>
+   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <meta name="viewport" content="width=500, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+   <style>
+        .headStyle{
+             height: 2.5em;
+             margin-top:6px;
+        }
+   </style>
+   <script>
+     function subInfos(){
+      if(resultForm.text.value==''){
+        alert('请填写信息');
+        resultForm.text.focus();
+        return false;
+      }
+    }
+   </script>
+  </head>
+  <body>
+        <div class="row">
+          <div class="col-sm-12 headStyle" style='text-align: center'>
+         <ul class="nav nav-pills nav-stacked">
+        <li class="active" id="hed" style="text-align: center; font-size: 30px">
+        <a href="#">第<%-answerRs.id%>题</a></li>
+         </ul>
+         <form name='resultForm' action='/result' method="post" onsubmit="return subInfos();">
+         <nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#">单选题</a>
+               <a class="navbar-brand" href="#" style="position: fixed;left: 49%"><%-answerRs.id%>/6</a>
+          </div> 
+        </div>
+      </nav>
+          <div class="container" style="width:auto;height:auto;border:2px solid #CDCDC1;border-radius:5px">
+            <div class="row">
+                  <h3 style="margin-top: 10px;"><%-answerRs.problem%></h3>
+                  <hr style="margin-top:10px;height:2px;border:0px;background-color:#D5D5D5;color:#D5D5D5;"/>
+                  <div class="col-md-2"></div>
+                  <div class="col-md-8" style="font-size: 20px;text-align: left;">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" name="text" style="width: 100%;height: 350px;resize: none;"></textarea>
+                      </div>
+                  </div>
+                  <div class="col-md-2"></div>
+              </div>
+                  <input type='hidden' name='topic' value="<%-answerRs.id%>">
+                  <input type="hidden" name="options" value='0'>
+               </div>
+                <button type="submit"  id="submit" name="submit" class="btn btn-primary btn-lg" style="margin-top: 10px;margin-left: 20px; width: 400px;">完成</button>
+               </form>
+              </div>
+         </div>   
+        </div>
+        
+</body>
+</html>

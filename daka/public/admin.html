@@ -1,0 +1,54 @@
+
+  <head>
+    <title>日报系统索维智能学院</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+   <script src="/javascripts/jquery-2.1.4.min.js"></script>
+   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <meta name="viewport" content="width=500, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+   <style>
+        .headStyle{
+             height: 0.5em;
+             margin-top:6px;
+        }
+   </style>
+   <script type="text/javascript">
+   </script>
+  </head>
+  <body style="background-color: #F7F7F7">
+        <div class="row" >
+          <div class="col-sm-12 headStyle">
+           <form class="bs-example bs-example-form" id="loginForm" role="loginForm" name='loginForm' action='/login' method="post">
+                 <img src="../../images/sowayai.jpg" style="height: 200;margin:0 auto;display:block">
+                <div style="padding: 50px 30% 10px;">
+			        <div class="row">
+			            <div class="col-lg-12 col-sm-12">
+			                <div class="input-group">
+			                    <span class="input-group-btn">
+			                        <button class="btn btn-default" type="button">姓名:</button>
+			                    </span>
+			                    <input type="text" id="name" name="name" class="form-control" placeholder="请输入真实姓名">
+			                </div><!-- /input-group -->
+			               <div class="input-group" style="margin-top: 30">
+                          <span class="input-group-btn">
+                              <button class="btn btn-default" type="button">身份:</button>
+                          </span>
+                          <input type="text" id="classes" name="classes" class="form-control" value="管理员" placeholder="管理员">
+                      </div><!-- /input-group -->
+			                <div class="input-group" style="margin-top: 30">
+			                    <span class="input-group-btn">
+			                        <button class="btn btn-default" type="button">密码:</button>
+			                    </span>
+			                    <input type="password" id="pwd" name="pwd" class="form-control" placeholder="请输入你的6-18位密码">
+                          <input type="hidden" id="frequency" name="frequency" class="form-control" value="1">
+			                </div><!-- /input-group -->
+                        <button type="submit" class="btn btn-primary btn-lg" style="margin:10% auto;display:block; width: 50%;" >登陆</button>
+                      <a href="/userRegister"> <button type="button" class="btn btn-link" style="margin-top: -15%;margin-left: 80%">新用户?</button></a>
+			            </div><!-- /.col-lg-4 -->
+			        </div>
+			    </div>      
+          </form>
+      </div>
+  </div>
+</body>
+</html>

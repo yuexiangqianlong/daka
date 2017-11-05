@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>日报系统索维智能学院</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+   <script src="http://libs.baidu.com/jquery/2.1.4/jquery.js"></script>
+   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <style>
+        .headStyle{
+             height: 2.5em;
+             margin-top:6px;
+        }
+   </style>
+   <script type="text/javascript">
+     function subInfo(){
+     if(assisForm.classes.value==''){
+        alert('班级不允许空');
+        assisForm.classes.focus();
+         return false;
+            }
+          }
+   </script>
+  </head>
+  <body id="body">
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10 headStyle">
+            <nav class="navbar navbar-inverse" role="navigation" style="width: 100% ;">
+            <div class="container-fluid">
+            <div class="navbar-header" >
+                <a class="navbar-brand" href="#" style='margin-left: 500px;'>讲师空间</a>
+            </div>
+            </div>
+           </nav>   
+          </div>
+          <div class="col-sm-1 headStyle"><a href="/"><button type="button" class="btn btn-success">注销</button></a></div>
+        </div>
+        <div class="row" style='margin-top: 25px'>
+      <div class="col-xs-12 col-sm-12 col-md-12"> 
+
+<div style="padding: 100px 100px 10px;">
+   <form class="bs-example bs-example-form" id="assisForm" role="assisForm" name='assisForm' action='/Classes' method="post" onsubmit=" return subInfo();">
+        <div class="row" style="margin-left: 30%">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">请输入班级：</button>
+                    </span>
+                    <input type="text" name="classes" class="form-control">
+
+                </div><!-- /input-group -->
+                <div> <button type="submit" class="btn btn-primary" style="margin-left: 100%; width: 30%;margin-top: -13%" >查询</button>
+                </div>
+            </div><!-- /.col-lg-6 -->
+             <div class="col-lg-6" id="main">
+              
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </form>
+</div>
+
+      </div>     
+</div>
+</body>
+</html>

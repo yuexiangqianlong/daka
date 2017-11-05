@@ -1,0 +1,27 @@
+ <script type="text/javascript">
+     function subInfo(){
+     if(assisForm.classes.value==''){
+        alert('班级不允许空');
+        assisForm.classes.focus();
+         return false;
+            }
+          }
+   </script>
+  </head>
+  <body id="body">
+   <form class="bs-example bs-example-form" id="assisForm" role="assisForm" name='assisForm' action='/admincls' method="post" onsubmit=" return subInfo();">
+        <div class="row" style="margin-top: 30%;margin-left: 20%">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">请输入班级：</button>
+                    </span>
+                    <input type="text" name="classes" class="form-control">
+
+                </div><!-- /input-group -->
+                <div> <button type="submit" class="btn btn-primary" style="margin-left: 100%; width: 30%;margin-top: -15%" >查询</button>
+                </div>
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </form>
+</div>

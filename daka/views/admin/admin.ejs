@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>日报系统索维智能学院</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+   <script src="http://libs.baidu.com/jquery/2.1.4/jquery.js"></script>
+   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <style>
+        .headStyle{
+             height: 2.5em;
+             margin-top:6px;
+        }
+   </style>
+   <script type="text/javascript">
+    function adminUser(){
+       $.get('./adminResult?topic='+1,function(data){
+       $('#main').html(data);
+       });
+    }
+     function topic6(){
+     $.get('./adminText?topic='+6,function(data){
+        $('#main').html(data);
+     })
+  }
+  function adminClass(){
+$('#main').load('./adminClass');
+  }
+   </script>
+  </head>
+  <body  id="body">
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10 headStyle">
+            <nav class="navbar navbar-inverse" role="navigation" style="width: 100% ;">
+            <div class="container-fluid">
+            <div class="navbar-header" >
+                <a class="navbar-brand" href="#" style='margin-left: 500px;'>管理员空间</a>
+            </div>
+            </div>
+           </nav>   
+          </div>
+          <div class="col-xs-1 col-sm-1 col-md-1 headStyle"><a href="/"><button type="button" class="btn btn-success">注销</button></a></div>
+        </div>
+        <div class="row" style='margin-top: 25px'>
+      <div class="col-xs-1 col-sm-1 col-md-1"> </div>
+      <div class="col-xs-2 col-sm-2 col-md-2" style='background-color:#080808;height:650px;margin-left: 15px;padding-left: 90px'>
+        <table height='100%';align='center'>
+          <tr><td><a href="#" onclick="adminUser()">打卡情况</a></td></tr>
+          <tr><td><a href='#' onclick='topic6()'>学生意见</a></td></tr>
+          <tr><td><a href="#"  onclick='adminClass()''>班级查询</a></td></tr>
+        </table>
+      </div>
+         
+      <div id='main' class="col-xs-8 col-sm-8 col-md-8" style='height:650px;width:65%'></div>
+
+      <div id="aa" class="col-xs-1 col-sm-1 col-md-1"></div>
+</div>
+</body>
+</html>

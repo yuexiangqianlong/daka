@@ -1,0 +1,74 @@
+<script>
+  function topic2(){
+     $.get('./adminResult?topic='+2,function(data){
+        $('#main').html(data);
+        $('#topic').text("第二题");
+        $('#problem').text("你觉得今天老师讲的内容难易程度");
+     })
+  };
+  function topic3(){
+     $.get('./adminResult?topic='+3,function(data){
+        $('#main').html(data);
+        $('#topic').text("第三题");
+        $('#problem').text("你认为讲师备课是否充分，是否知识点丰富话题有趣");
+     })
+  }
+  function topic4(){
+     $.get('./adminResult?topic='+4,function(data){
+        $('#main').html(data);
+        $('#topic').text("第四题");
+        $('#problem').text("你能完成当天的代码量是多少");
+     })
+  }
+   function topic5(){
+     $.get('./adminResult?topic='+5,function(data){
+        $('#main').html(data);
+        $('#topic').text("第五题");
+        $('#problem').text("你觉得你目前存在的问题是");
+     })
+  }
+ function zero(){
+   if(confirm('确定全部置零删除吗?')){
+    $.get('./zero',function(data){
+      alert(data);
+       $('#body').html(data);
+      })
+    }
+  }
+</script>
+<div>
+  <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
+<button type="button" onclick="topic2()" class="btn btn-primary">第二题</button>
+<!-- 表示一个成功的或积极的动作 -->
+<button type="button" onclick="topic3()" class="btn btn-success">第三题</button>
+<!-- 信息警告消息的上下文按钮 -->
+<button type="button" onclick="topic4()" class="btn btn-info">第四题</button>
+<!-- 表示应谨慎采取的动作 -->
+<button type="button" onclick="topic5()" class="btn btn-warning">第五题</button>
+<!-- 表示一个危险的或潜在的负面动作 -->
+<button type="button" onclick="zero()" class="btn btn-danger">全部清空置零</button>
+ <table class="table">
+      <caption>学生答题情况表</caption>
+      <thead>
+        <tr>
+          <th>题号</th>
+          <th>问题</th>
+          <th>选项A</th>
+          <th>选项B</th>
+          <th>选项C</th>
+          <th>选项D</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td id="topic">第一题</td>
+        <td id="problem">今天的上课知识你吸收了多少</td>
+        <td><%-rs%></td>
+        <td><%-rs1%></td>
+        <td><%-rs2%></td>
+        <td><%-rs3%></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
