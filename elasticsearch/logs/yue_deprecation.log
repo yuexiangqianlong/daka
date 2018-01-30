@@ -1,0 +1,1 @@
+[2017-12-22T14:13:35,711][WARN ][o.e.d.i.m.MapperService  ] [_default_] mapping is deprecated since it is not useful anymore now that indexes cannot have more than one type

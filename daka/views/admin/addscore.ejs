@@ -1,0 +1,25 @@
+  <script>
+ function ascore(){
+ 	if(confirm('确定加分吗?')){
+     let score=$('#score').val();
+     if (score<30) {
+		$.post('/addscore',{score:score,op:op,pid:pid},function(rs){
+          if (rs==0) {              
+    $(".modal-backdrop").remove(); //消除遮罩层
+      $('#main').load('./adminsearchStudents');
+          }
+    })
+     }else{
+    	alert("填写正确的添加分数，分数不得大于30分")
+     } 
+   }
+ }
+</script>
+ 
+<form role="form" id="addscoreFrom">
+<div class="input-group">
+  <span class="input-group-addon">@</span>
+  <input type="number" id="score" name="score" class="form-control" placeholder="请输入要添加的分数">
+</div>
+  <button type="button" onclick="ascore()" class="btn btn-warning">提交</button>
+</form>

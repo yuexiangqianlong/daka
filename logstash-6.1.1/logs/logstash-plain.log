@@ -1,0 +1,216 @@
+[2018-01-08T17:52:53,083][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"fb_apache", :directory=>"D:/www/sdk/dakaKoa2/logstash-6.1.1/modules/fb_apache/configuration"}
+[2018-01-08T17:52:53,222][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"netflow", :directory=>"D:/www/sdk/dakaKoa2/logstash-6.1.1/modules/netflow/configuration"}
+[2018-01-08T17:52:53,564][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2018-01-08T17:52:54,527][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"6.1.1"}
+[2018-01-08T17:52:55,281][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2018-01-08T17:53:03,288][WARN ][logstash.outputs.elasticsearch] You are using a deprecated config setting "document_type" set in elasticsearch. Deprecated settings will continue to work, but are scheduled for removal from logstash in the future. Document types are being deprecated in Elasticsearch 6.0, and removed entirely in 7.0. You should avoid this feature If you have any questions about this, please visit the #logstash channel on freenode irc. {:name=>"document_type", :plugin=><LogStash::Outputs::ElasticSearch hosts=>[//127.0.0.1:9200], index=>"pserson", document_type=>"score", document_id=>"%{id}", id=>"d27b06b398a2ed9e1b77c7e21b9f2a9f12415a52925baecf075c9c6cdc94017c", enable_metric=>true, codec=><LogStash::Codecs::Plain id=>"plain_caf51290-8a2b-4d70-b449-4671ff5b0bbb", enable_metric=>true, charset=>"UTF-8">, workers=>1, manage_template=>true, template_name=>"logstash", template_overwrite=>false, doc_as_upsert=>false, script_type=>"inline", script_lang=>"painless", script_var_name=>"event", scripted_upsert=>false, retry_initial_interval=>2, retry_max_interval=>64, retry_on_conflict=>1, action=>"index", ssl_certificate_verification=>true, sniffing=>false, sniffing_delay=>5, timeout=>60, pool_max=>1000, pool_max_per_route=>100, resurrect_delay=>5, validate_after_inactivity=>10000, http_compression=>false>}
+[2018-01-08T17:53:04,242][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://127.0.0.1:9200/]}}
+[2018-01-08T17:53:04,250][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://127.0.0.1:9200/, :path=>"/"}
+[2018-01-08T17:53:06,963][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>"http://127.0.0.1:9200/"}
+[2018-01-08T17:53:09,525][INFO ][logstash.outputs.elasticsearch] ES Output version determined {:es_version=>nil}
+[2018-01-08T17:53:09,529][WARN ][logstash.outputs.elasticsearch] Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>6}
+[2018-01-08T17:53:09,546][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2018-01-08T17:53:09,563][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>60001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword", "ignore_above"=>256}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date"}, "@version"=>{"type"=>"keyword"}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2018-01-08T17:53:11,175][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//127.0.0.1:9200"]}
+[2018-01-08T17:53:11,199][INFO ][logstash.pipeline        ] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>4, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>500, :thread=>"#<Thread:0x4eb096fc run>"}
+[2018-01-08T17:53:12,082][INFO ][logstash.pipeline        ] Pipeline started {"pipeline.id"=>"main"}
+[2018-01-08T17:53:12,267][INFO ][logstash.agent           ] Pipelines running {:count=>1, :pipelines=>["main"]}
+[2018-01-08T17:54:03,797][INFO ][logstash.inputs.jdbc     ] (0.007000s) SELECT version()
+[2018-01-08T17:54:04,198][INFO ][logstash.inputs.jdbc     ] (0.161000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T17:54:04,264][INFO ][logstash.inputs.jdbc     ] (0.031000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T17:55:03,529][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2018-01-08T17:55:03,562][INFO ][logstash.inputs.jdbc     ] (0.002000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T17:55:03,580][INFO ][logstash.inputs.jdbc     ] (0.002000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T17:55:05,889][WARN ][logstash.outputs.elasticsearch] Marking url as dead. Last error: [LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError] Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketTimeout] Read timed out {:url=>http://127.0.0.1:9200/, :error_message=>"Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketTimeout] Read timed out", :error_class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError"}
+[2018-01-08T17:55:05,902][WARN ][logstash.outputs.elasticsearch] Marking url as dead. Last error: [LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError] Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketTimeout] Read timed out {:url=>http://127.0.0.1:9200/, :error_message=>"Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketTimeout] Read timed out", :error_class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError"}
+[2018-01-08T17:55:05,919][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch' but Elasticsearch appears to be unreachable or down! {:error_message=>"Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketTimeout] Read timed out", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError", :will_retry_in_seconds=>2}
+[2018-01-08T17:55:05,924][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch' but Elasticsearch appears to be unreachable or down! {:error_message=>"Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketTimeout] Read timed out", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError", :will_retry_in_seconds=>2}
+[2018-01-08T17:55:07,936][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2018-01-08T17:55:07,938][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2018-01-08T17:55:07,942][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>4}
+[2018-01-08T17:55:07,942][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>4}
+[2018-01-08T17:55:10,572][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://127.0.0.1:9200/, :path=>"/"}
+[2018-01-08T17:55:10,670][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>"http://127.0.0.1:9200/"}
+[2018-01-08T17:56:00,657][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2018-01-08T17:56:01,893][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T17:56:01,919][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T17:57:00,398][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2018-01-08T17:57:00,447][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T17:57:00,478][INFO ][logstash.inputs.jdbc     ] (0.007000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T17:58:18,130][INFO ][logstash.inputs.jdbc     ] (0.002000s) SELECT version()
+[2018-01-08T17:58:24,191][INFO ][logstash.inputs.jdbc     ] (0.002000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T17:58:26,263][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T17:59:14,953][INFO ][logstash.inputs.jdbc     ] (0.019000s) SELECT version()
+[2018-01-08T17:59:15,354][INFO ][logstash.inputs.jdbc     ] (0.037000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T17:59:15,429][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:00:03,352][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2018-01-08T18:00:04,678][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:00:05,075][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:01:02,977][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2018-01-08T18:01:02,982][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:01:03,047][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:04:58,889][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2018-01-08T18:04:59,093][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:04:59,098][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:05:06,481][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2018-01-08T18:05:07,198][INFO ][logstash.inputs.jdbc     ] (0.002000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:05:07,352][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:05:39,692][WARN ][logstash.outputs.elasticsearch] Marking url as dead. Last error: [LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError] Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketException] Unrecognized Windows Sockets error: 0: recv failed {:url=>http://127.0.0.1:9200/, :error_message=>"Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketException] Unrecognized Windows Sockets error: 0: recv failed", :error_class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError"}
+[2018-01-08T18:05:41,315][WARN ][logstash.outputs.elasticsearch] Marking url as dead. Last error: [LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError] Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketException] Unrecognized Windows Sockets error: 0: recv failed {:url=>http://127.0.0.1:9200/, :error_message=>"Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketException] Unrecognized Windows Sockets error: 0: recv failed", :error_class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError"}
+[2018-01-08T18:05:46,360][WARN ][logstash.outputs.elasticsearch] Marking url as dead. Last error: [LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError] Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketException] Unrecognized Windows Sockets error: 0: recv failed {:url=>http://127.0.0.1:9200/, :error_message=>"Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketException] Unrecognized Windows Sockets error: 0: recv failed", :error_class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError"}
+[2018-01-08T18:05:47,566][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://127.0.0.1:9200/, :path=>"/"}
+[2018-01-08T18:05:48,444][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch' but Elasticsearch appears to be unreachable or down! {:error_message=>"Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketException] Unrecognized Windows Sockets error: 0: recv failed", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError", :will_retry_in_seconds=>2}
+[2018-01-08T18:05:48,444][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch' but Elasticsearch appears to be unreachable or down! {:error_message=>"Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketException] Unrecognized Windows Sockets error: 0: recv failed", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError", :will_retry_in_seconds=>2}
+[2018-01-08T18:05:48,444][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch' but Elasticsearch appears to be unreachable or down! {:error_message=>"Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketException] Unrecognized Windows Sockets error: 0: recv failed", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError", :will_retry_in_seconds=>2}
+[2018-01-08T18:05:51,551][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2018-01-08T18:05:51,551][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2018-01-08T18:05:51,576][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2018-01-08T18:05:51,812][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>4}
+[2018-01-08T18:05:51,812][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>4}
+[2018-01-08T18:05:51,813][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>4}
+[2018-01-08T18:05:53,793][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>"http://127.0.0.1:9200/"}
+[2018-01-08T18:05:55,819][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2018-01-08T18:05:55,820][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>8}
+[2018-01-08T18:05:56,120][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2018-01-08T18:05:56,120][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2018-01-08T18:05:56,122][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>8}
+[2018-01-08T18:05:56,122][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>8}
+[2018-01-08T18:06:01,129][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2018-01-08T18:06:01,376][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:06:01,982][INFO ][logstash.inputs.jdbc     ] (0.173000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:07:01,712][INFO ][logstash.inputs.jdbc     ] (0.003000s) SELECT version()
+[2018-01-08T18:07:01,752][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:07:01,812][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:08:01,474][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2018-01-08T18:08:01,552][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:08:01,619][INFO ][logstash.inputs.jdbc     ] (0.058000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:09:00,470][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2018-01-08T18:09:00,474][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:09:00,481][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:10:00,456][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2018-01-08T18:10:00,535][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:10:00,631][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:11:00,635][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2018-01-08T18:11:01,058][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:11:01,859][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:12:00,202][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2018-01-08T18:12:00,237][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:12:00,246][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:13:00,214][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2018-01-08T18:13:00,259][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:13:00,263][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:14:01,067][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2018-01-08T18:14:01,071][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:14:01,075][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:15:00,389][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2018-01-08T18:15:00,393][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:15:00,397][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:16:03,722][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2018-01-08T18:16:03,727][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:16:03,732][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:17:03,409][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2018-01-08T18:17:03,558][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:17:03,593][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:18:00,239][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2018-01-08T18:18:00,259][INFO ][logstash.inputs.jdbc     ] (0.017000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:18:00,271][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:19:03,393][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2018-01-08T18:19:03,397][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM users) AS `t1` LIMIT 1
+[2018-01-08T18:19:03,402][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM users) AS `t1` LIMIT 50000 OFFSET 0
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,309][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:35,197][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2018-01-08T18:19:49,586][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,585][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,585][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,585][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,584][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,584][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,584][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,584][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,584][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,584][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,584][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,585][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,583][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,584][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,584][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,583][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,583][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,583][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,583][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,583][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,583][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,617][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,586][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:49,586][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2018-01-08T18:19:58,304][INFO ][logstash.pipeline        ] Pipeline terminated {"pipeline.id"=>"main"}

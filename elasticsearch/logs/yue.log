@@ -1,0 +1,157 @@
+[2018-01-08T16:46:07,716][INFO ][o.e.n.Node               ] [slave1] initializing ...
+[2018-01-08T16:46:08,337][INFO ][o.e.e.NodeEnvironment    ] [slave1] using [1] data paths, mounts [[LENOVO (D:)]], net usable_space [33gb], net total_space [113.6gb], types [NTFS]
+[2018-01-08T16:46:08,338][INFO ][o.e.e.NodeEnvironment    ] [slave1] heap size [990.7mb], compressed ordinary object pointers [true]
+[2018-01-08T16:46:08,808][INFO ][o.e.n.Node               ] [slave1] node name [slave1], node ID [o7HQeShRRuS0OsSaK6ZMzw]
+[2018-01-08T16:46:08,810][INFO ][o.e.n.Node               ] [slave1] version[6.0.1], pid[9488], build[601be4a/2017-12-04T09:29:09.525Z], OS[Windows 8.1/6.3/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_31/25.31-b07]
+[2018-01-08T16:46:08,811][INFO ][o.e.n.Node               ] [slave1] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -XX:+HeapDumpOnOutOfMemoryError, -Delasticsearch, -Des.path.home=D:\tools\elashfenzhi\elasticsearch, -Des.path.conf=D:\tools\elashfenzhi\elasticsearch\config]
+[2018-01-08T16:46:13,024][INFO ][o.e.p.PluginsService     ] [slave1] loaded module [aggs-matrix-stats]
+[2018-01-08T16:46:13,025][INFO ][o.e.p.PluginsService     ] [slave1] loaded module [analysis-common]
+[2018-01-08T16:46:13,025][INFO ][o.e.p.PluginsService     ] [slave1] loaded module [ingest-common]
+[2018-01-08T16:46:13,026][INFO ][o.e.p.PluginsService     ] [slave1] loaded module [lang-expression]
+[2018-01-08T16:46:13,026][INFO ][o.e.p.PluginsService     ] [slave1] loaded module [lang-mustache]
+[2018-01-08T16:46:13,026][INFO ][o.e.p.PluginsService     ] [slave1] loaded module [lang-painless]
+[2018-01-08T16:46:13,027][INFO ][o.e.p.PluginsService     ] [slave1] loaded module [parent-join]
+[2018-01-08T16:46:13,027][INFO ][o.e.p.PluginsService     ] [slave1] loaded module [percolator]
+[2018-01-08T16:46:13,027][INFO ][o.e.p.PluginsService     ] [slave1] loaded module [reindex]
+[2018-01-08T16:46:13,028][INFO ][o.e.p.PluginsService     ] [slave1] loaded module [repository-url]
+[2018-01-08T16:46:13,030][INFO ][o.e.p.PluginsService     ] [slave1] loaded module [transport-netty4]
+[2018-01-08T16:46:13,033][INFO ][o.e.p.PluginsService     ] [slave1] loaded module [tribe]
+[2018-01-08T16:46:13,037][INFO ][o.e.p.PluginsService     ] [slave1] no plugins loaded
+[2018-01-08T16:46:21,471][INFO ][o.e.d.DiscoveryModule    ] [slave1] using discovery type [zen]
+[2018-01-08T16:46:24,403][INFO ][o.e.n.Node               ] [slave1] initialized
+[2018-01-08T16:46:24,404][INFO ][o.e.n.Node               ] [slave1] starting ...
+[2018-01-08T16:46:26,388][INFO ][o.e.t.TransportService   ] [slave1] publish_address {127.0.0.1:9301}, bound_addresses {127.0.0.1:9301}
+[2018-01-08T16:46:31,241][INFO ][o.e.c.s.ClusterApplierService] [slave1] detected_master {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}, added {{master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300},}, reason: apply cluster state (from master [master {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300} committed version [10]])
+[2018-01-08T16:46:31,986][INFO ][o.e.h.n.Netty4HttpServerTransport] [slave1] publish_address {127.0.0.1:8200}, bound_addresses {127.0.0.1:8200}
+[2018-01-08T16:46:31,987][INFO ][o.e.n.Node               ] [slave1] started
+[2018-01-08T16:47:47,781][INFO ][o.e.c.s.ClusterApplierService] [slave1] added {{slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302},}, reason: apply cluster state (from master [master {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300} committed version [25]])
+[2018-01-08T17:54:56,376][WARN ][o.e.t.TransportService   ] [slave1] Received response for a request that has timed out, sent [43249ms] ago, timed out [12088ms] ago, action [internal:discovery/zen/fd/master_ping], node [{master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}], id [4119]
+[2018-01-08T17:58:49,244][WARN ][o.e.m.j.JvmGcMonitorService] [slave1] [gc][young][4242][4] duration [1.1m], collections [1]/[1.2m], total [1.1m]/[1.1m], memory [420.8mb]->[181.2mb]/[990.7mb], all_pools {[young] [266.2mb]->[22.2mb]/[266.2mb]}{[survivor] [26.3mb]->[10.5mb]/[33.2mb]}{[old] [128.2mb]->[148.4mb]/[691.2mb]}
+[2018-01-08T17:58:49,591][WARN ][o.e.m.j.JvmGcMonitorService] [slave1] [gc][4242] overhead, spent [1.1m] collecting in the last [1.2m]
+[2018-01-08T18:04:01,742][INFO ][o.e.c.s.ClusterApplierService] [slave1] removed {{slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302},}, reason: apply cluster state (from master [master {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300} committed version [34]])
+[2018-01-08T18:04:25,630][INFO ][o.e.i.s.IndexShard       ] [slave1] [people][1] primary-replica resync completed with 0 operations
+[2018-01-08T18:06:27,151][WARN ][o.e.m.j.JvmGcMonitorService] [slave1] [gc][young][4649][5] duration [5.6s], collections [1]/[5.8s], total [5.6s]/[1.2m], memory [423.4mb]->[172.5mb]/[990.7mb], all_pools {[young] [264.5mb]->[12.6mb]/[266.2mb]}{[survivor] [10.5mb]->[11.5mb]/[33.2mb]}{[old] [148.4mb]->[148.4mb]/[691.2mb]}
+[2018-01-08T18:06:27,151][WARN ][o.e.m.j.JvmGcMonitorService] [slave1] [gc][4649] overhead, spent [5.6s] collecting in the last [5.8s]
+[2018-01-08T18:06:47,878][WARN ][o.e.d.z.ZenDiscovery     ] [slave1] received a cluster state from a different master than the current one, rejecting (received {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}, current {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300})
+[2018-01-08T18:07:17,446][WARN ][o.e.d.z.ZenDiscovery     ] [slave1] received a cluster state from a different master than the current one, rejecting (received {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}, current {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300})
+[2018-01-08T18:07:29,422][INFO ][o.e.c.s.ClusterApplierService] [slave1] added {{slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302},}, reason: apply cluster state (from master [master {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300} committed version [41]])
+[2018-01-08T18:11:25,441][WARN ][o.e.m.j.JvmGcMonitorService] [slave1] [gc][young][4935][6] duration [5.4s], collections [1]/[6.7s], total [5.4s]/[1.3m], memory [423.2mb]->[164.8mb]/[990.7mb], all_pools {[young] [263.3mb]->[7.5mb]/[266.2mb]}{[survivor] [11.5mb]->[9.9mb]/[33.2mb]}{[old] [148.4mb]->[148.4mb]/[691.2mb]}
+[2018-01-08T18:11:25,461][WARN ][o.e.m.j.JvmGcMonitorService] [slave1] [gc][4935] overhead, spent [5.4s] collecting in the last [6.7s]
+[2018-01-08T18:19:28,516][WARN ][o.e.m.j.JvmGcMonitorService] [slave1] [gc][young][5397][7] duration [10.4s], collections [1]/[12s], total [10.4s]/[1.5m], memory [424.1mb]->[160.1mb]/[990.7mb], all_pools {[young] [265.7mb]->[5.9mb]/[266.2mb]}{[survivor] [9.9mb]->[8.3mb]/[33.2mb]}{[old] [148.4mb]->[148.4mb]/[691.2mb]}
+[2018-01-08T18:19:28,768][WARN ][o.e.m.j.JvmGcMonitorService] [slave1] [gc][5397] overhead, spent [10.4s] collecting in the last [12s]
+[2018-01-08T18:20:42,284][INFO ][o.e.c.s.ClusterApplierService] [slave1] removed {{slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302},}, reason: apply cluster state (from master [master {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300} committed version [51]])
+[2018-01-08T18:22:03,360][INFO ][o.e.d.z.ZenDiscovery     ] [slave1] master_left [{master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}], reason [shut_down]
+[2018-01-08T18:22:03,360][INFO ][o.e.d.z.ZenDiscovery     ] [slave1] master_left [{master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}], reason [transport disconnected]
+[2018-01-08T18:22:03,554][WARN ][o.e.d.z.ZenDiscovery     ] [slave1] master left (reason = shut_down), current nodes: nodes: 
+   {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}, master
+   {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}, local
+
+[2018-01-08T18:22:05,936][WARN ][o.e.t.n.Netty4Transport  ] [slave1] write and flush on the network layer failed (channel: [id: 0x7b57f3be, L:/127.0.0.1:9301 ! R:/127.0.0.1:60131])
+java.nio.channels.ClosedChannelException: null
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source) ~[?:?]
+[2018-01-08T18:22:05,493][WARN ][o.e.c.NodeConnectionsService] [slave1] failed to connect to node {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300} (tried [1] times)
+org.elasticsearch.transport.ConnectTransportException: [master][127.0.0.1:9300] connect_timeout[30s]
+	at org.elasticsearch.transport.netty4.Netty4Transport.connectToChannels(Netty4Transport.java:284) ~[?:?]
+	at org.elasticsearch.transport.TcpTransport.openConnection(TcpTransport.java:592) ~[elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.transport.TcpTransport.connectToNode(TcpTransport.java:496) ~[elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:334) ~[elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:321) ~[elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.cluster.NodeConnectionsService.validateAndConnectIfNeeded(NodeConnectionsService.java:154) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.cluster.NodeConnectionsService$1.doRun(NodeConnectionsService.java:107) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingAbstractRunnable.doRun(ThreadContext.java:638) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-6.0.1.jar:6.0.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_31]
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: 127.0.0.1/127.0.0.1:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716) ~[?:?]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:352) ~[?:?]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:632) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:544) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:498) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:458) ~[?:?]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[?:?]
+	... 1 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716) ~[?:?]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:352) ~[?:?]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:632) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:544) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:498) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:458) ~[?:?]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[?:?]
+	... 1 more
+[2018-01-08T18:22:09,989][INFO ][o.e.c.s.MasterService    ] [slave1] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}
+[2018-01-08T18:22:10,463][INFO ][o.e.c.s.ClusterApplierService] [slave1] new_master {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}, reason: apply cluster state (from master [master {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301} committed version [58] source [zen-disco-elected-as-master ([0] nodes joined)]])
+[2018-01-08T18:22:12,123][DEBUG][o.e.a.a.c.n.s.TransportNodesStatsAction] [slave1] failed to execute on node [66r070b9S3upjwPMaeoIbA]
+org.elasticsearch.transport.NodeNotConnectedException: [master][127.0.0.1:9300] Node not connected
+	at org.elasticsearch.transport.TcpTransport.getConnection(TcpTransport.java:658) ~[elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.transport.TcpTransport.getConnection(TcpTransport.java:122) ~[elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.transport.TransportService.getConnection(TransportService.java:532) ~[elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:508) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.start(TransportNodesAction.java:197) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:89) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:52) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.action.support.TransportAction$RequestFilterChain.proceed(TransportAction.java:167) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:139) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:81) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.client.node.NodeClient.executeLocally(NodeClient.java:83) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.client.node.NodeClient.doExecute(NodeClient.java:72) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.client.support.AbstractClient.execute(AbstractClient.java:405) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.client.support.AbstractClient$ClusterAdmin.execute(AbstractClient.java:712) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.client.support.AbstractClient$ClusterAdmin.nodesStats(AbstractClient.java:808) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService.updateNodeStats(InternalClusterInfoService.java:254) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService.refresh(InternalClusterInfoService.java:290) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService.maybeRefresh(InternalClusterInfoService.java:275) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService.lambda$onMaster$0(InternalClusterInfoService.java:140) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService$$Lambda$1819/1807153167.run(Unknown Source) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:569) [elasticsearch-6.0.1.jar:6.0.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_31]
+[2018-01-08T18:22:12,515][INFO ][o.e.c.s.MasterService    ] [slave1] zen-disco-node-failed({master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}), reason(transport disconnected)[{master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300} transport disconnected], reason: removed {{master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300},}
+[2018-01-08T18:22:12,502][DEBUG][o.e.a.a.i.s.TransportIndicesStatsAction] [slave1] failed to execute [indices:monitor/stats] on node [66r070b9S3upjwPMaeoIbA]
+org.elasticsearch.transport.NodeNotConnectedException: [master][127.0.0.1:9300] Node not connected
+	at org.elasticsearch.transport.TcpTransport.getConnection(TcpTransport.java:658) ~[elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.transport.TcpTransport.getConnection(TcpTransport.java:122) ~[elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.transport.TransportService.getConnection(TransportService.java:532) ~[elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:495) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction$AsyncAction.sendNodeRequest(TransportBroadcastByNodeAction.java:322) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction$AsyncAction.start(TransportBroadcastByNodeAction.java:311) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction.doExecute(TransportBroadcastByNodeAction.java:234) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction.doExecute(TransportBroadcastByNodeAction.java:79) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.action.support.TransportAction$RequestFilterChain.proceed(TransportAction.java:167) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:139) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:81) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.client.node.NodeClient.executeLocally(NodeClient.java:83) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.client.node.NodeClient.doExecute(NodeClient.java:72) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.client.support.AbstractClient.execute(AbstractClient.java:405) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.client.support.AbstractClient$IndicesAdmin.execute(AbstractClient.java:1253) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.client.support.AbstractClient$IndicesAdmin.stats(AbstractClient.java:1574) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService.updateIndicesStats(InternalClusterInfoService.java:268) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService.refresh(InternalClusterInfoService.java:319) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService.maybeRefresh(InternalClusterInfoService.java:275) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService.lambda$onMaster$0(InternalClusterInfoService.java:140) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService$$Lambda$1819/1807153167.run(Unknown Source) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:569) [elasticsearch-6.0.1.jar:6.0.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_31]
+[2018-01-08T18:22:12,563][INFO ][o.e.c.s.ClusterApplierService] [slave1] removed {{master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300},}, reason: apply cluster state (from master [master {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301} committed version [59] source [zen-disco-node-failed({master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}), reason(transport disconnected)[{master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300} transport disconnected]]])
+[2018-01-08T18:22:13,607][INFO ][o.e.i.s.IndexShard       ] [slave1] [people][0] primary-replica resync completed with 0 operations
+[2018-01-08T18:22:13,652][INFO ][o.e.i.s.IndexShard       ] [slave1] [goods][2] primary-replica resync completed with 0 operations
+[2018-01-08T18:22:13,859][INFO ][o.e.i.s.IndexShard       ] [slave1] [goods][1] primary-replica resync completed with 0 operations
+[2018-01-08T18:22:14,259][INFO ][o.e.i.s.IndexShard       ] [slave1] [goods][0] primary-replica resync completed with 0 operations
+[2018-01-08T18:22:14,341][INFO ][o.e.i.s.IndexShard       ] [slave1] [pserson][3] primary-replica resync completed with 0 operations
+[2018-01-08T18:22:14,606][INFO ][o.e.i.s.IndexShard       ] [slave1] [pserson][4] primary-replica resync completed with 0 operations
+[2018-01-08T18:22:14,639][INFO ][o.e.i.s.IndexShard       ] [slave1] [pserson][2] primary-replica resync completed with 0 operations
+[2018-01-08T18:22:14,665][INFO ][o.e.c.r.DelayedAllocationService] [slave1] scheduling reroute for delayed shards in [57s] (11 delayed shards)
+[2018-01-08T18:22:14,806][INFO ][o.e.i.s.IndexShard       ] [slave1] [pserson][0] primary-replica resync completed with 0 operations
+[2018-01-08T18:22:17,362][INFO ][o.e.n.Node               ] [slave1] stopping ...
+[2018-01-08T18:22:20,065][INFO ][o.e.n.Node               ] [slave1] stopped
+[2018-01-08T18:22:20,070][INFO ][o.e.n.Node               ] [slave1] closing ...
+[2018-01-08T18:22:20,943][INFO ][o.e.n.Node               ] [slave1] closed

@@ -56,7 +56,7 @@
             }
           };
       function codes(){
-        $.post('./code',{phone:registerForm.phone.value},function(re){}) 
+      $.post('./code',{phone:registerForm.phone.value},function(re){}) 
           $('#codess').attr("disabled","disabled");
           $('#codess').text('10分钟后重试');
          

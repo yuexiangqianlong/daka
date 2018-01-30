@@ -99,8 +99,12 @@ router.post('/Register', async function(ctx, next) {
 			let sql = 'insert into users set name=?,pwd=?,classes=?,frequency=?,phone=?'
 			let rs = await sequelize.query(sql, {
 				replacements: [ctx.request.body.name, ctx.request.body.pwd, ctx.request.body.classes, ctx.request.body.frequency, ctx.request.body.phone]
-			});
-			if (rs) {
+			}).catch(function(err) {
+				if (err.errors[0].path == 'nameuniq') {
+					ctx.body = '姓名重复'
+				}
+			})
+			if (rs != undefined) {
 				let sql = 'select * from users where id=?';
 				let userRs = await sequelize.query(sql, {
 					replacements: [rs[0]]
@@ -122,6 +126,7 @@ router.post('/Register', async function(ctx, next) {
 					console.log(answerRs[0]);
 				}
 			}
+
 		} else {
 			ctx.body = '验证码或手机号错误';
 		}

@@ -1,0 +1,448 @@
+[2017-12-22T10:30:20,668][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"fb_apache", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/fb_apache/configuration"}
+[2017-12-22T10:30:20,708][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"netflow", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/netflow/configuration"}
+[2017-12-22T10:30:21,125][INFO ][logstash.setting.writabledirectory] Creating directory {:setting=>"path.queue", :path=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/data/queue"}
+[2017-12-22T10:30:21,193][INFO ][logstash.setting.writabledirectory] Creating directory {:setting=>"path.dead_letter_queue", :path=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/data/dead_letter_queue"}
+[2017-12-22T10:30:21,634][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2017-12-22T10:30:21,757][INFO ][logstash.agent           ] No persistent UUID file found. Generating new UUID {:uuid=>"27a54dc8-e19d-4bd2-8d04-e0e6070915b1", :path=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/data/uuid"}
+[2017-12-22T10:30:23,285][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"6.1.1"}
+[2017-12-22T10:30:24,532][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-12-22T10:30:35,884][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://localhost:9200/]}}
+[2017-12-22T10:30:35,901][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:30:38,376][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"http://localhost:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [http://localhost:9200/][Manticore::SocketException] Connection refused: connect"}
+[2017-12-22T10:30:38,423][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-12-22T10:30:38,489][ERROR][logstash.outputs.elasticsearch] Failed to install template. {:message=>"Template file '' could not be found!", :class=>"ArgumentError", :backtrace=>["D:/tools/logstash-6.1.1.zip/logstash-6.1.1/vendor/bundle/jruby/2.3.0/gems/logstash-output-elasticsearch-9.0.2-java/lib/logstash/outputs/elasticsearch/template_manager.rb:31:in `read_template_file'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/vendor/bundle/jruby/2.3.0/gems/logstash-output-elasticsearch-9.0.2-java/lib/logstash/outputs/elasticsearch/template_manager.rb:17:in `get_template'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/vendor/bundle/jruby/2.3.0/gems/logstash-output-elasticsearch-9.0.2-java/lib/logstash/outputs/elasticsearch/template_manager.rb:7:in `install_template'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/vendor/bundle/jruby/2.3.0/gems/logstash-output-elasticsearch-9.0.2-java/lib/logstash/outputs/elasticsearch/common.rb:57:in `install_template'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/vendor/bundle/jruby/2.3.0/gems/logstash-output-elasticsearch-9.0.2-java/lib/logstash/outputs/elasticsearch/common.rb:26:in `register'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/output_delegator_strategies/shared.rb:9:in `register'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/output_delegator.rb:43:in `register'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:343:in `register_plugin'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:354:in `block in register_plugins'", "org/jruby/RubyArray.java:1734:in `each'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:354:in `register_plugins'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:743:in `maybe_setup_out_plugins'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:364:in `start_workers'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:288:in `run'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:248:in `block in start'"]}
+[2017-12-22T10:30:38,509][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//localhost:9200"]}
+[2017-12-22T10:30:38,576][INFO ][logstash.pipeline        ] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>4, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>500, :thread=>"#<Thread:0x2fff37c9 run>"}
+[2017-12-22T10:30:38,797][INFO ][logstash.pipeline        ] Pipeline started {"pipeline.id"=>"main"}
+[2017-12-22T10:30:39,106][INFO ][logstash.agent           ] Pipelines running {:count=>1, :pipelines=>["main"]}
+[2017-12-22T10:30:43,433][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:30:45,496][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"http://localhost:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [http://localhost:9200/][Manticore::SocketException] Connection refused: connect"}
+[2017-12-22T10:30:48,504][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:30:50,524][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"http://localhost:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [http://localhost:9200/][Manticore::SocketException] Connection refused: connect"}
+[2017-12-22T10:30:53,535][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:30:55,543][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"http://localhost:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [http://localhost:9200/][Manticore::SocketException] Connection refused: connect"}
+[2017-12-22T10:30:58,549][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:31:00,550][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"http://localhost:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [http://localhost:9200/][Manticore::SocketException] Connection refused: connect"}
+[2017-12-22T10:31:03,556][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:31:05,566][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"http://localhost:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [http://localhost:9200/][Manticore::SocketException] Connection refused: connect"}
+[2017-12-22T10:31:08,591][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:31:10,608][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"http://localhost:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [http://localhost:9200/][Manticore::SocketException] Connection refused: connect"}
+[2017-12-22T10:31:13,622][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:31:15,664][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"http://localhost:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [http://localhost:9200/][Manticore::SocketException] Connection refused: connect"}
+[2017-12-22T10:31:18,671][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:31:20,699][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"http://localhost:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [http://localhost:9200/][Manticore::SocketException] Connection refused: connect"}
+[2017-12-22T10:31:23,719][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:31:25,742][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"http://localhost:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [http://localhost:9200/][Manticore::SocketException] Connection refused: connect"}
+[2017-12-22T10:31:28,760][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:31:30,760][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"http://localhost:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [http://localhost:9200/][Manticore::SocketException] Connection refused: connect"}
+[2017-12-22T10:31:33,768][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:31:35,802][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"http://localhost:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [http://localhost:9200/][Manticore::SocketException] Connection refused: connect"}
+[2017-12-22T10:31:38,812][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:31:40,874][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"http://localhost:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [http://localhost:9200/][Manticore::SocketException] Connection refused: connect"}
+[2017-12-22T10:31:43,902][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:31:45,925][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"http://localhost:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [http://localhost:9200/][Manticore::SocketException] Connection refused: connect"}
+[2017-12-22T10:31:48,945][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T10:31:50,163][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T10:31:50,353][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T11:47:21,564][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"fb_apache", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/fb_apache/configuration"}
+[2017-12-22T11:47:21,657][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"netflow", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/netflow/configuration"}
+[2017-12-22T11:47:22,257][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2017-12-22T11:47:24,051][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"6.1.1"}
+[2017-12-22T11:47:25,131][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-12-22T11:47:36,893][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://localhost:9200/]}}
+[2017-12-22T11:47:36,943][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T11:47:40,296][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>"http://localhost:9200/"}
+[2017-12-22T11:47:41,028][INFO ][logstash.outputs.elasticsearch] ES Output version determined {:es_version=>nil}
+[2017-12-22T11:47:41,038][WARN ][logstash.outputs.elasticsearch] Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>6}
+[2017-12-22T11:47:41,068][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-12-22T11:47:41,128][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>60001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword", "ignore_above"=>256}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date"}, "@version"=>{"type"=>"keyword"}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2017-12-22T11:47:41,418][INFO ][logstash.outputs.elasticsearch] Installing elasticsearch template to _template/logstash
+[2017-12-22T11:47:42,658][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//localhost:9200"]}
+[2017-12-22T11:47:42,918][INFO ][logstash.pipeline        ] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>4, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>500, :thread=>"#<Thread:0x26c75c67 run>"}
+[2017-12-22T11:47:44,778][INFO ][logstash.pipeline        ] Pipeline started {"pipeline.id"=>"main"}
+[2017-12-22T11:47:45,164][INFO ][logstash.agent           ] Pipelines running {:count=>1, :pipelines=>["main"]}
+[2017-12-22T11:51:41,350][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"fb_apache", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/fb_apache/configuration"}
+[2017-12-22T11:51:41,420][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"netflow", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/netflow/configuration"}
+[2017-12-22T11:51:42,310][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2017-12-22T11:51:44,090][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"6.1.1"}
+[2017-12-22T11:51:45,300][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-12-22T11:52:00,074][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://localhost:9200/]}}
+[2017-12-22T11:52:00,114][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T11:52:00,954][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>"http://localhost:9200/"}
+[2017-12-22T11:52:01,084][INFO ][logstash.outputs.elasticsearch] ES Output version determined {:es_version=>nil}
+[2017-12-22T11:52:01,084][WARN ][logstash.outputs.elasticsearch] Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>6}
+[2017-12-22T11:52:01,114][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-12-22T11:52:01,134][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>60001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword", "ignore_above"=>256}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date"}, "@version"=>{"type"=>"keyword"}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2017-12-22T11:52:01,242][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//localhost:9200"]}
+[2017-12-22T11:52:01,312][INFO ][logstash.pipeline        ] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>4, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>500, :thread=>"#<Thread:0x7df70eec run>"}
+[2017-12-22T11:52:02,022][INFO ][logstash.pipeline        ] Pipeline started {"pipeline.id"=>"main"}
+[2017-12-22T11:52:02,372][INFO ][logstash.agent           ] Pipelines running {:count=>1, :pipelines=>["main"]}
+[2017-12-22T11:53:05,727][INFO ][logstash.inputs.jdbc     ] (0.030000s) SELECT version()
+[2017-12-22T11:53:06,404][ERROR][logstash.inputs.jdbc     ] Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist: SELECT count(*) AS `count` FROM (SELECT * FROM news limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T11:53:06,480][WARN ][logstash.inputs.jdbc     ] Exception when executing JDBC query {:exception=>#<Sequel::DatabaseError: Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist>}
+[2017-12-22T11:54:00,344][INFO ][logstash.inputs.jdbc     ] (0.004000s) SELECT version()
+[2017-12-22T11:54:00,568][ERROR][logstash.inputs.jdbc     ] Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist: SELECT count(*) AS `count` FROM (SELECT * FROM news limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T11:54:00,573][WARN ][logstash.inputs.jdbc     ] Exception when executing JDBC query {:exception=>#<Sequel::DatabaseError: Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist>}
+[2017-12-22T11:55:29,274][INFO ][logstash.inputs.jdbc     ] (0.214000s) SELECT version()
+[2017-12-22T11:55:30,873][ERROR][logstash.inputs.jdbc     ] Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist: SELECT count(*) AS `count` FROM (SELECT * FROM news limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T11:55:30,938][WARN ][logstash.inputs.jdbc     ] Exception when executing JDBC query {:exception=>#<Sequel::DatabaseError: Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist>}
+[2017-12-22T11:56:28,790][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2017-12-22T11:56:28,841][ERROR][logstash.inputs.jdbc     ] Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist: SELECT count(*) AS `count` FROM (SELECT * FROM news limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T11:56:28,867][WARN ][logstash.inputs.jdbc     ] Exception when executing JDBC query {:exception=>#<Sequel::DatabaseError: Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist>}
+[2017-12-22T11:57:00,238][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2017-12-22T11:57:00,278][ERROR][logstash.inputs.jdbc     ] Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist: SELECT count(*) AS `count` FROM (SELECT * FROM news limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T11:57:00,278][WARN ][logstash.inputs.jdbc     ] Exception when executing JDBC query {:exception=>#<Sequel::DatabaseError: Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist>}
+[2017-12-22T11:58:00,864][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2017-12-22T11:58:00,915][ERROR][logstash.inputs.jdbc     ] Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist: SELECT count(*) AS `count` FROM (SELECT * FROM news limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T11:58:00,915][WARN ][logstash.inputs.jdbc     ] Exception when executing JDBC query {:exception=>#<Sequel::DatabaseError: Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist>}
+[2017-12-22T11:59:00,551][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2017-12-22T11:59:00,641][ERROR][logstash.inputs.jdbc     ] Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist: SELECT count(*) AS `count` FROM (SELECT * FROM news limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T11:59:00,651][WARN ][logstash.inputs.jdbc     ] Exception when executing JDBC query {:exception=>#<Sequel::DatabaseError: Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist>}
+[2017-12-22T12:00:00,640][INFO ][logstash.inputs.jdbc     ] (0.030000s) SELECT version()
+[2017-12-22T12:00:00,710][ERROR][logstash.inputs.jdbc     ] Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist: SELECT count(*) AS `count` FROM (SELECT * FROM news limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T12:00:00,800][WARN ][logstash.inputs.jdbc     ] Exception when executing JDBC query {:exception=>#<Sequel::DatabaseError: Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist>}
+[2017-12-22T12:01:00,104][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2017-12-22T12:01:00,124][ERROR][logstash.inputs.jdbc     ] Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist: SELECT count(*) AS `count` FROM (SELECT * FROM news limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T12:01:00,144][WARN ][logstash.inputs.jdbc     ] Exception when executing JDBC query {:exception=>#<Sequel::DatabaseError: Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist>}
+[2017-12-22T12:02:00,397][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2017-12-22T12:02:00,447][ERROR][logstash.inputs.jdbc     ] Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist: SELECT count(*) AS `count` FROM (SELECT * FROM news limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T12:02:00,457][WARN ][logstash.inputs.jdbc     ] Exception when executing JDBC query {:exception=>#<Sequel::DatabaseError: Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist>}
+[2017-12-22T12:03:00,308][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2017-12-22T12:03:00,318][ERROR][logstash.inputs.jdbc     ] Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist: SELECT count(*) AS `count` FROM (SELECT * FROM news limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T12:03:00,328][WARN ][logstash.inputs.jdbc     ] Exception when executing JDBC query {:exception=>#<Sequel::DatabaseError: Java::ComMysqlJdbcExceptionsJdbc4::MySQLSyntaxErrorException: Table 'canyin.news' doesn't exist>}
+[2017-12-22T12:03:01,788][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T12:03:01,788][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T12:03:01,828][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T12:03:02,628][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T12:30:41,998][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"fb_apache", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/fb_apache/configuration"}
+[2017-12-22T12:30:42,092][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"netflow", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/netflow/configuration"}
+[2017-12-22T12:30:42,716][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2017-12-22T12:30:43,584][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"6.1.1"}
+[2017-12-22T12:30:44,314][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-12-22T12:30:51,319][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://localhost:9200/]}}
+[2017-12-22T12:30:51,349][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T12:31:09,179][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>"http://localhost:9200/"}
+[2017-12-22T12:31:09,349][INFO ][logstash.outputs.elasticsearch] ES Output version determined {:es_version=>nil}
+[2017-12-22T12:31:09,359][WARN ][logstash.outputs.elasticsearch] Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>6}
+[2017-12-22T12:31:09,399][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-12-22T12:31:09,479][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>60001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword", "ignore_above"=>256}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date"}, "@version"=>{"type"=>"keyword"}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2017-12-22T12:31:09,679][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//localhost:9200"]}
+[2017-12-22T12:31:09,739][INFO ][logstash.pipeline        ] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>4, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>500, :thread=>"#<Thread:0x4d9cab1d run>"}
+[2017-12-22T12:31:10,899][INFO ][logstash.pipeline        ] Pipeline started {"pipeline.id"=>"main"}
+[2017-12-22T12:31:11,359][INFO ][logstash.agent           ] Pipelines running {:count=>1, :pipelines=>["main"]}
+[2017-12-22T12:32:04,584][INFO ][logstash.inputs.jdbc     ] (0.040000s) SELECT version()
+[2017-12-22T12:32:05,797][INFO ][logstash.inputs.jdbc     ] (0.690000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T12:32:05,907][INFO ][logstash.inputs.jdbc     ] (0.020000s) SELECT * FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T12:33:00,455][INFO ][logstash.inputs.jdbc     ] (0.002000s) SELECT version()
+[2017-12-22T12:33:00,517][INFO ][logstash.inputs.jdbc     ] (0.002000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T12:33:00,563][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT * FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T12:33:45,958][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T12:33:46,258][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T14:03:55,130][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"fb_apache", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/fb_apache/configuration"}
+[2017-12-22T14:03:55,190][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"netflow", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/netflow/configuration"}
+[2017-12-22T14:03:56,367][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2017-12-22T14:03:57,764][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"6.1.1"}
+[2017-12-22T14:03:59,318][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-12-22T14:04:00,518][ERROR][logstash.agent           ] Failed to execute action {:action=>LogStash::PipelineAction::Create/pipeline_id:main, :exception=>"LogStash::ConfigurationError", :message=>"Expected one of #, => at line 12, column 21 (byte 494) after input {\n  jdbc {\n    jdbc_driver_library => \"D:\\tools\\mysql\\mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar\"\n    jdbc_driver_class => \"com.mysql.jdbc.Driver\"\n    jdbc_connection_string => \"jdbc:mysql://localhost:3306/canyin?characterEncoding=UTF-8&useSSL=false\"\n    jdbc_user => \"root\"\n    jdbc_password => \"228151\"\n    statement => \"SELECT * FROM goods limit 0,1\"\n    jdbc_paging_enabled => \"true\"\n    jdbc_page_size => \"50000\"\n    schedule => \"* * * * *\"\n    use_column_value", :backtrace=>["D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:42:in `compile_imperative'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:50:in `compile_graph'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:12:in `block in compile_sources'", "org/jruby/RubyArray.java:2486:in `map'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:11:in `compile_sources'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:51:in `initialize'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:171:in `initialize'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline_action/create.rb:40:in `execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:335:in `block in converge_state'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:141:in `with_pipelines'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:332:in `block in converge_state'", "org/jruby/RubyArray.java:1734:in `each'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:319:in `converge_state'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:166:in `block in converge_state_and_update'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:141:in `with_pipelines'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:164:in `converge_state_and_update'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:90:in `execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/runner.rb:343:in `block in execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/vendor/bundle/jruby/2.3.0/gems/stud-0.0.23/lib/stud/task.rb:24:in `block in initialize'"]}
+[2017-12-22T14:06:46,855][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"fb_apache", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/fb_apache/configuration"}
+[2017-12-22T14:06:46,905][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"netflow", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/netflow/configuration"}
+[2017-12-22T14:06:47,745][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2017-12-22T14:06:49,514][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"6.1.1"}
+[2017-12-22T14:06:51,051][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-12-22T14:06:52,807][ERROR][logstash.agent           ] Failed to execute action {:action=>LogStash::PipelineAction::Create/pipeline_id:main, :exception=>"LogStash::ConfigurationError", :message=>"Expected one of #, => at line 12, column 21 (byte 494) after input {\n  jdbc {\n    jdbc_driver_library => \"D:\\tools\\mysql\\mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar\"\n    jdbc_driver_class => \"com.mysql.jdbc.Driver\"\n    jdbc_connection_string => \"jdbc:mysql://localhost:3306/canyin?characterEncoding=UTF-8&useSSL=false\"\n    jdbc_user => \"root\"\n    jdbc_password => \"228151\"\n    statement => \"SELECT * FROM goods limit 0,1\"\n    jdbc_paging_enabled => \"true\"\n    jdbc_page_size => \"50000\"\n    schedule => \"* * * * *\"\n    use_column_value", :backtrace=>["D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:42:in `compile_imperative'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:50:in `compile_graph'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:12:in `block in compile_sources'", "org/jruby/RubyArray.java:2486:in `map'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:11:in `compile_sources'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:51:in `initialize'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:171:in `initialize'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline_action/create.rb:40:in `execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:335:in `block in converge_state'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:141:in `with_pipelines'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:332:in `block in converge_state'", "org/jruby/RubyArray.java:1734:in `each'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:319:in `converge_state'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:166:in `block in converge_state_and_update'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:141:in `with_pipelines'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:164:in `converge_state_and_update'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:90:in `execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/runner.rb:343:in `block in execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/vendor/bundle/jruby/2.3.0/gems/stud-0.0.23/lib/stud/task.rb:24:in `block in initialize'"]}
+[2017-12-22T14:08:41,107][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"fb_apache", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/fb_apache/configuration"}
+[2017-12-22T14:08:41,137][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"netflow", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/netflow/configuration"}
+[2017-12-22T14:08:41,906][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2017-12-22T14:08:43,547][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"6.1.1"}
+[2017-12-22T14:08:44,668][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-12-22T14:08:46,049][ERROR][logstash.agent           ] Failed to execute action {:action=>LogStash::PipelineAction::Create/pipeline_id:main, :exception=>"LogStash::ConfigurationError", :message=>"Expected one of #, => at line 12, column 21 (byte 494) after input {\n  jdbc {\n    jdbc_driver_library => \"D:\\tools\\mysql\\mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar\"\n    jdbc_driver_class => \"com.mysql.jdbc.Driver\"\n    jdbc_connection_string => \"jdbc:mysql://localhost:3306/canyin?characterEncoding=UTF-8&useSSL=false\"\n    jdbc_user => \"root\"\n    jdbc_password => \"228151\"\n    statement => \"SELECT * FROM goods limit 0,1\"\n    jdbc_paging_enabled => \"true\"\n    jdbc_page_size => \"50000\"\n    schedule => \"* * * * *\"\n    use_column_value", :backtrace=>["D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:42:in `compile_imperative'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:50:in `compile_graph'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:12:in `block in compile_sources'", "org/jruby/RubyArray.java:2486:in `map'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:11:in `compile_sources'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:51:in `initialize'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:171:in `initialize'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline_action/create.rb:40:in `execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:335:in `block in converge_state'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:141:in `with_pipelines'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:332:in `block in converge_state'", "org/jruby/RubyArray.java:1734:in `each'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:319:in `converge_state'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:166:in `block in converge_state_and_update'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:141:in `with_pipelines'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:164:in `converge_state_and_update'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:90:in `execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/runner.rb:343:in `block in execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/vendor/bundle/jruby/2.3.0/gems/stud-0.0.23/lib/stud/task.rb:24:in `block in initialize'"]}
+[2017-12-22T14:11:05,147][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"fb_apache", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/fb_apache/configuration"}
+[2017-12-22T14:11:05,192][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"netflow", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/netflow/configuration"}
+[2017-12-22T14:11:05,624][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2017-12-22T14:11:07,367][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"6.1.1"}
+[2017-12-22T14:11:08,781][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-12-22T14:11:10,109][ERROR][logstash.agent           ] Failed to execute action {:action=>LogStash::PipelineAction::Create/pipeline_id:main, :exception=>"LogStash::ConfigurationError", :message=>"Expected one of #, => at line 9, column 21 (byte 402) after input {\n  jdbc {\n    jdbc_driver_library => \"D:\\tools\\mysql\\mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar\"\n    jdbc_driver_class => \"com.mysql.jdbc.Driver\"\n    jdbc_connection_string => \"jdbc:mysql://localhost:3306/canyin?characterEncoding=UTF-8&useSSL=false\"\n    jdbc_user => \"root\"\n    jdbc_password => \"228151\"\n    statement => \"SELECT * FROM goods limit 0,1\"\n    use_column_value", :backtrace=>["D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:42:in `compile_imperative'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:50:in `compile_graph'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:12:in `block in compile_sources'", "org/jruby/RubyArray.java:2486:in `map'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/compiler.rb:11:in `compile_sources'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:51:in `initialize'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline.rb:171:in `initialize'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/pipeline_action/create.rb:40:in `execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:335:in `block in converge_state'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:141:in `with_pipelines'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:332:in `block in converge_state'", "org/jruby/RubyArray.java:1734:in `each'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:319:in `converge_state'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:166:in `block in converge_state_and_update'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:141:in `with_pipelines'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:164:in `converge_state_and_update'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:90:in `execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/runner.rb:343:in `block in execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/vendor/bundle/jruby/2.3.0/gems/stud-0.0.23/lib/stud/task.rb:24:in `block in initialize'"]}
+[2017-12-22T14:13:14,126][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"fb_apache", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/fb_apache/configuration"}
+[2017-12-22T14:13:14,176][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"netflow", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/netflow/configuration"}
+[2017-12-22T14:13:14,846][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2017-12-22T14:13:16,211][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"6.1.1"}
+[2017-12-22T14:13:17,156][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-12-22T14:13:30,298][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://localhost:9200/]}}
+[2017-12-22T14:13:30,348][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://localhost:9200/, :path=>"/"}
+[2017-12-22T14:13:30,957][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>"http://localhost:9200/"}
+[2017-12-22T14:13:31,087][INFO ][logstash.outputs.elasticsearch] ES Output version determined {:es_version=>nil}
+[2017-12-22T14:13:31,087][WARN ][logstash.outputs.elasticsearch] Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>6}
+[2017-12-22T14:13:31,147][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-12-22T14:13:31,197][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>60001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword", "ignore_above"=>256}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date"}, "@version"=>{"type"=>"keyword"}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2017-12-22T14:13:31,771][INFO ][logstash.outputs.elasticsearch] Installing elasticsearch template to _template/logstash
+[2017-12-22T14:13:37,961][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//localhost:9200"]}
+[2017-12-22T14:13:38,031][INFO ][logstash.pipeline        ] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>4, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>500, :thread=>"#<Thread:0x721ef405 run>"}
+[2017-12-22T14:13:38,944][INFO ][logstash.pipeline        ] Pipeline started {"pipeline.id"=>"main"}
+[2017-12-22T14:13:39,184][INFO ][logstash.agent           ] Pipelines running {:count=>1, :pipelines=>["main"]}
+[2017-12-22T14:14:04,971][INFO ][logstash.inputs.jdbc     ] (0.020000s) SELECT version()
+[2017-12-22T14:14:05,614][INFO ][logstash.inputs.jdbc     ] (0.251000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T14:14:05,713][INFO ][logstash.inputs.jdbc     ] (0.016000s) SELECT * FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T14:15:00,694][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2017-12-22T14:15:00,774][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T14:15:00,854][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT * FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T14:16:04,012][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2017-12-22T14:16:04,259][INFO ][logstash.inputs.jdbc     ] (0.002000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T14:16:05,057][INFO ][logstash.inputs.jdbc     ] (0.002000s) SELECT * FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T14:16:32,869][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:16:32,869][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:16:32,869][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:16:32,869][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:16:32,869][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:16:33,239][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:16:36,532][INFO ][logstash.pipeline        ] Pipeline terminated {"pipeline.id"=>"main"}
+[2017-12-22T14:33:48,683][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"fb_apache", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/fb_apache/configuration"}
+[2017-12-22T14:33:48,743][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"netflow", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/netflow/configuration"}
+[2017-12-22T14:33:49,423][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2017-12-22T14:33:50,835][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"6.1.1"}
+[2017-12-22T14:33:51,215][ERROR][logstash.agent           ] An exception happened when converging configuration {:exception=>RuntimeError, :message=>"Could not fetch the configuration, message: The following config files contains non-ascii characters but are not UTF-8 encoded [\"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/bin/logstash-mysql.conf\"]", :backtrace=>["D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:155:in `converge_state_and_update'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:90:in `execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/runner.rb:343:in `block in execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/vendor/bundle/jruby/2.3.0/gems/stud-0.0.23/lib/stud/task.rb:24:in `block in initialize'"]}
+[2017-12-22T14:33:51,735][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-12-22T14:40:38,600][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"fb_apache", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/fb_apache/configuration"}
+[2017-12-22T14:40:38,640][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"netflow", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/netflow/configuration"}
+[2017-12-22T14:40:39,049][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2017-12-22T14:40:39,890][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"6.1.1"}
+[2017-12-22T14:40:40,080][ERROR][logstash.agent           ] An exception happened when converging configuration {:exception=>RuntimeError, :message=>"Could not fetch the configuration, message: The following config files contains non-ascii characters but are not UTF-8 encoded [\"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/bin/logstash-mysql.conf\"]", :backtrace=>["D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:155:in `converge_state_and_update'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/agent.rb:90:in `execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/logstash-core/lib/logstash/runner.rb:343:in `block in execute'", "D:/tools/logstash-6.1.1.zip/logstash-6.1.1/vendor/bundle/jruby/2.3.0/gems/stud-0.0.23/lib/stud/task.rb:24:in `block in initialize'"]}
+[2017-12-22T14:40:40,350][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-12-22T14:48:32,544][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"fb_apache", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/fb_apache/configuration"}
+[2017-12-22T14:48:32,664][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"netflow", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/netflow/configuration"}
+[2017-12-22T14:48:33,636][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2017-12-22T14:48:35,196][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"6.1.1"}
+[2017-12-22T14:48:36,416][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-12-22T14:48:47,165][WARN ][logstash.outputs.elasticsearch] You are using a deprecated config setting "document_type" set in elasticsearch. Deprecated settings will continue to work, but are scheduled for removal from logstash in the future. Document types are being deprecated in Elasticsearch 6.0, and removed entirely in 7.0. You should avoid this feature If you have any questions about this, please visit the #logstash channel on freenode irc. {:name=>"document_type", :plugin=><LogStash::Outputs::ElasticSearch hosts=>[//127.0.0.1:9200], index=>"goods", document_type=>"foods", document_id=>"%{id}", id=>"6991ad0e806ccb9333a39ec9a828c31958d9c532b8b4fa38338c4a5096687b55", enable_metric=>true, codec=><LogStash::Codecs::Plain id=>"plain_7b72c2e3-3958-41f7-9c35-c7453e8ecf34", enable_metric=>true, charset=>"UTF-8">, workers=>1, manage_template=>true, template_name=>"logstash", template_overwrite=>false, doc_as_upsert=>false, script_type=>"inline", script_lang=>"painless", script_var_name=>"event", scripted_upsert=>false, retry_initial_interval=>2, retry_max_interval=>64, retry_on_conflict=>1, action=>"index", ssl_certificate_verification=>true, sniffing=>false, sniffing_delay=>5, timeout=>60, pool_max=>1000, pool_max_per_route=>100, resurrect_delay=>5, validate_after_inactivity=>10000, http_compression=>false>}
+[2017-12-22T14:48:48,718][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://127.0.0.1:9200/]}}
+[2017-12-22T14:48:48,788][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://127.0.0.1:9200/, :path=>"/"}
+[2017-12-22T14:48:49,428][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>"http://127.0.0.1:9200/"}
+[2017-12-22T14:48:49,768][INFO ][logstash.outputs.elasticsearch] ES Output version determined {:es_version=>nil}
+[2017-12-22T14:48:49,778][WARN ][logstash.outputs.elasticsearch] Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>6}
+[2017-12-22T14:48:49,828][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-12-22T14:48:49,888][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>60001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword", "ignore_above"=>256}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date"}, "@version"=>{"type"=>"keyword"}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2017-12-22T14:48:50,208][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//127.0.0.1:9200"]}
+[2017-12-22T14:48:50,258][INFO ][logstash.pipeline        ] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>4, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>500, :thread=>"#<Thread:0xe647d55 run>"}
+[2017-12-22T14:48:50,908][INFO ][logstash.pipeline        ] Pipeline started {"pipeline.id"=>"main"}
+[2017-12-22T14:48:51,158][INFO ][logstash.agent           ] Pipelines running {:count=>1, :pipelines=>["main"]}
+[2017-12-22T14:49:04,917][INFO ][logstash.inputs.jdbc     ] (0.020000s) SELECT version()
+[2017-12-22T14:49:05,387][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T14:49:05,477][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT * FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T14:50:01,111][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2017-12-22T14:50:01,161][INFO ][logstash.inputs.jdbc     ] (0.010000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T14:50:04,502][INFO ][logstash.inputs.jdbc     ] (0.002000s) SELECT * FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T14:51:00,373][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2017-12-22T14:51:00,431][INFO ][logstash.inputs.jdbc     ] (0.003000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T14:51:00,498][INFO ][logstash.inputs.jdbc     ] (0.002000s) SELECT * FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T14:52:19,324][INFO ][logstash.inputs.jdbc     ] (0.010000s) SELECT version()
+[2017-12-22T14:52:20,141][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T14:52:20,680][INFO ][logstash.inputs.jdbc     ] (0.219000s) SELECT * FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:29,489][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:28,749][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T14:52:36,926][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:37,016][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:37,316][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:37,016][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:36,926][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:39,410][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:39,410][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:39,410][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:39,170][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:38,060][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:38,060][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:37,960][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:37,700][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:37,960][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:37,366][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:37,700][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:37,700][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:37,016][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:37,316][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:39,170][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:40,536][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:40,271][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:39,418][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:39,597][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:52:39,410][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T14:53:10,009][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2017-12-22T14:53:11,684][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 1
+[2017-12-22T14:53:14,105][INFO ][logstash.inputs.jdbc     ] (0.002000s) SELECT * FROM (SELECT * FROM goods limit 0,1) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T14:54:06,276][WARN ][logstash.outputs.elasticsearch] Marking url as dead. Last error: [LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError] Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketTimeout] Read timed out {:url=>http://127.0.0.1:9200/, :error_message=>"Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketTimeout] Read timed out", :error_class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError"}
+[2017-12-22T14:54:09,267][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://127.0.0.1:9200/, :path=>"/"}
+[2017-12-22T14:54:10,128][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch' but Elasticsearch appears to be unreachable or down! {:error_message=>"Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketTimeout] Read timed out", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError", :will_retry_in_seconds=>2}
+[2017-12-22T14:54:14,700][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2017-12-22T14:54:14,705][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>4}
+[2017-12-22T14:54:19,443][WARN ][logstash.outputs.elasticsearch] Marking url as dead. Last error: [LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError] Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketTimeout] Read timed out {:url=>http://127.0.0.1:9200/, :error_message=>"Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketTimeout] Read timed out", :error_class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError"}
+[2017-12-22T14:54:19,446][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch' but Elasticsearch appears to be unreachable or down! {:error_message=>"Elasticsearch Unreachable: [http://127.0.0.1:9200/][Manticore::SocketTimeout] Read timed out", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError", :will_retry_in_seconds=>2}
+[2017-12-22T14:54:19,446][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2017-12-22T14:54:19,465][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>8}
+[2017-12-22T14:54:21,583][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2017-12-22T14:54:21,585][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>4}
+[2017-12-22T14:54:26,661][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2017-12-22T14:54:26,703][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>8}
+[2017-12-22T14:54:26,785][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T14:54:26,785][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T14:54:26,785][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T14:54:26,785][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T14:54:26,785][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T14:54:26,785][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T14:54:26,785][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T14:54:26,785][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T14:54:26,785][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T14:54:26,785][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T14:54:26,822][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>"http://127.0.0.1:9200/"}
+[2017-12-22T14:54:26,785][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T14:54:26,785][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..
+[2017-12-22T14:54:27,965][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2017-12-22T14:54:27,966][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>16}
+[2017-12-22T14:55:02,501][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2017-12-22T14:55:02,501][WARN ][logstash.outputs.elasticsearch] UNEXPECTED POOL ERROR {:e=>#<LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError: No Available connections>}
+[2017-12-22T14:55:02,605][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>32}
+[2017-12-22T14:55:02,605][ERROR][logstash.outputs.elasticsearch] Attempted to send a bulk request to elasticsearch, but no there are no living connections in the connection pool. Perhaps Elasticsearch is unreachable or down? {:error_message=>"No Available connections", :class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError", :will_retry_in_seconds=>16}
+[2017-12-22T15:09:58,964][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"fb_apache", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/fb_apache/configuration"}
+[2017-12-22T15:09:59,016][INFO ][logstash.modules.scaffold] Initializing module {:module_name=>"netflow", :directory=>"D:/tools/logstash-6.1.1.zip/logstash-6.1.1/modules/netflow/configuration"}
+[2017-12-22T15:09:59,502][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2017-12-22T15:10:00,764][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"6.1.1"}
+[2017-12-22T15:10:02,020][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-12-22T15:10:12,156][WARN ][logstash.outputs.elasticsearch] You are using a deprecated config setting "document_type" set in elasticsearch. Deprecated settings will continue to work, but are scheduled for removal from logstash in the future. Document types are being deprecated in Elasticsearch 6.0, and removed entirely in 7.0. You should avoid this feature If you have any questions about this, please visit the #logstash channel on freenode irc. {:name=>"document_type", :plugin=><LogStash::Outputs::ElasticSearch hosts=>[//127.0.0.1:9200], index=>"goods", document_type=>"foods", document_id=>"%{id}", id=>"0277316734af42f2df651823548fbc4d20302917087f3759d5353a58bbb270e4", enable_metric=>true, codec=><LogStash::Codecs::Plain id=>"plain_53450979-8d93-45bd-89bc-af638dad8ef3", enable_metric=>true, charset=>"UTF-8">, workers=>1, manage_template=>true, template_name=>"logstash", template_overwrite=>false, doc_as_upsert=>false, script_type=>"inline", script_lang=>"painless", script_var_name=>"event", scripted_upsert=>false, retry_initial_interval=>2, retry_max_interval=>64, retry_on_conflict=>1, action=>"index", ssl_certificate_verification=>true, sniffing=>false, sniffing_delay=>5, timeout=>60, pool_max=>1000, pool_max_per_route=>100, resurrect_delay=>5, validate_after_inactivity=>10000, http_compression=>false>}
+[2017-12-22T15:10:13,762][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://127.0.0.1:9200/]}}
+[2017-12-22T15:10:13,786][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://127.0.0.1:9200/, :path=>"/"}
+[2017-12-22T15:10:15,010][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>"http://127.0.0.1:9200/"}
+[2017-12-22T15:10:15,269][INFO ][logstash.outputs.elasticsearch] ES Output version determined {:es_version=>nil}
+[2017-12-22T15:10:15,277][WARN ][logstash.outputs.elasticsearch] Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>6}
+[2017-12-22T15:10:15,322][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-12-22T15:10:15,389][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>60001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword", "ignore_above"=>256}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date"}, "@version"=>{"type"=>"keyword"}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2017-12-22T15:10:16,102][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//127.0.0.1:9200"]}
+[2017-12-22T15:10:16,172][INFO ][logstash.pipeline        ] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>4, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>500, :thread=>"#<Thread:0x3b0ebcf8 run>"}
+[2017-12-22T15:10:16,832][INFO ][logstash.pipeline        ] Pipeline started {"pipeline.id"=>"main"}
+[2017-12-22T15:10:17,062][INFO ][logstash.agent           ] Pipelines running {:count=>1, :pipelines=>["main"]}
+[2017-12-22T15:11:03,466][INFO ][logstash.inputs.jdbc     ] (0.010000s) SELECT version()
+[2017-12-22T15:11:03,906][INFO ][logstash.inputs.jdbc     ] (0.079000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods) AS `t1` LIMIT 1
+[2017-12-22T15:11:03,982][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT * FROM (SELECT * FROM goods) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T15:12:00,479][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2017-12-22T15:12:00,548][INFO ][logstash.inputs.jdbc     ] (0.010000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods) AS `t1` LIMIT 1
+[2017-12-22T15:12:00,605][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT * FROM (SELECT * FROM goods) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T15:13:02,731][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2017-12-22T15:13:02,801][INFO ][logstash.inputs.jdbc     ] (0.010000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods) AS `t1` LIMIT 1
+[2017-12-22T15:13:02,911][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT * FROM (SELECT * FROM goods) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T15:14:00,515][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2017-12-22T15:14:00,555][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods) AS `t1` LIMIT 1
+[2017-12-22T15:14:00,605][INFO ][logstash.inputs.jdbc     ] (0.030000s) SELECT * FROM (SELECT * FROM goods) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T15:15:00,303][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2017-12-22T15:15:00,353][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods) AS `t1` LIMIT 1
+[2017-12-22T15:15:00,373][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT * FROM (SELECT * FROM goods) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T15:16:00,462][INFO ][logstash.inputs.jdbc     ] (0.027000s) SELECT version()
+[2017-12-22T15:16:00,524][INFO ][logstash.inputs.jdbc     ] (0.012000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods) AS `t1` LIMIT 1
+[2017-12-22T15:16:00,630][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT * FROM (SELECT * FROM goods) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T15:17:12,820][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2017-12-22T15:17:13,300][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods) AS `t1` LIMIT 1
+[2017-12-22T15:17:13,498][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM goods) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T15:18:00,574][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT version()
+[2017-12-22T15:18:00,584][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods) AS `t1` LIMIT 1
+[2017-12-22T15:18:00,629][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT * FROM (SELECT * FROM goods) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T15:21:34,226][INFO ][logstash.inputs.jdbc     ] (0.014000s) SELECT version()
+[2017-12-22T15:21:37,524][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods) AS `t1` LIMIT 1
+[2017-12-22T15:21:37,853][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT * FROM (SELECT * FROM goods) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T15:22:01,454][INFO ][logstash.inputs.jdbc     ] (0.001000s) SELECT version()
+[2017-12-22T15:22:01,597][INFO ][logstash.inputs.jdbc     ] (0.000000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods) AS `t1` LIMIT 1
+[2017-12-22T15:22:02,039][INFO ][logstash.inputs.jdbc     ] (0.143000s) SELECT * FROM (SELECT * FROM goods) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T15:23:00,202][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T15:23:00,162][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T15:23:00,202][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T15:23:00,202][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T15:23:00,162][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T15:23:00,232][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
+[2017-12-22T15:23:05,712][INFO ][logstash.inputs.jdbc     ] (0.125000s) SELECT version()
+[2017-12-22T15:23:06,242][INFO ][logstash.inputs.jdbc     ] (0.090000s) SELECT count(*) AS `count` FROM (SELECT * FROM goods) AS `t1` LIMIT 1
+[2017-12-22T15:23:06,577][INFO ][logstash.inputs.jdbc     ] (0.040000s) SELECT * FROM (SELECT * FROM goods) AS `t1` LIMIT 50000 OFFSET 0
+[2017-12-22T15:23:07,281][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T15:23:07,571][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T15:23:07,571][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T15:23:07,721][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T15:23:07,561][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T15:23:08,351][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2017-12-22T15:23:22,091][FATAL][logstash.runner          ] SIGINT received. Terminating immediately..

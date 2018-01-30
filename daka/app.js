@@ -9,6 +9,7 @@ const logger = require('koa-logger')
 const index = require('./routes/index')
 const users = require('./routes/users')
 const admin = require('./routes/admin')
+const documents = require('./routes/documents')
 const Assistant = require('./routes/Assistant')
 const session = require('koa-generic-session');
 
@@ -34,7 +35,7 @@ app.use(views(__dirname + '/views', {
 }));
 
 // logger
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
 	const start = new Date()
 	await next()
 	const ms = new Date() - start
@@ -42,7 +43,7 @@ app.use(async(ctx, next) => {
 })
 
 var openPage = ['/', '/userRegister', '/login', '/Register', '/code'];
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
 	var url = ctx.originalUrl;
 	console.log('url=' + url);
 	url = (url.split('?'))[0];
@@ -64,6 +65,7 @@ app.use(async(ctx, next) => {
 app.use(users.routes(), users.allowedMethods())
 app.use(admin.routes(), admin.allowedMethods())
 app.use(Assistant.routes(), Assistant.allowedMethods())
+app.use(documents.routes(), documents.allowedMethods())
 
 // app.use(index.routes(), index.allowedMethods())
 

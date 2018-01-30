@@ -1,0 +1,35 @@
+  <script>
+ function Psearch(){
+ 	if(confirm('确定扣分吗?')){
+     let score=$('#score').val();
+     let reason=$("#reason").val();
+     if (score<30) {
+     	if (reason) {
+     		
+     		$.post('/Pointscore',{score:score,reason:reason,op:op,pid:pid},function(rs){
+                  if (rs==0) {              
+            $(".modal-backdrop").remove(); //消除遮罩层
+              $('#main').load('./adminsearchStudents');
+                  }
+            })
+     	}else{
+     		alert("填写扣分的理由")
+       }	
+     }else{
+    	alert("填写正确的扣除分数，分数不得大于30分")
+     } 
+   }
+ }
+</script>
+ 
+<form role="form" id="scoreFrom">
+<div class="input-group">
+  <span class="input-group-addon">@</span>
+  <input type="number" id="score" name="score" class="form-control" placeholder="请输入要扣的分数">
+</div>
+  <div class="form-group">
+    <label for="name">扣分理由</label>
+    <textarea name="reason" id="reason" class="form-control" rows="3"></textarea>
+  </div>
+  <button type="button" onclick="Psearch()" class="btn btn-warning">提交</button>
+</form>

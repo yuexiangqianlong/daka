@@ -33,12 +33,8 @@ router.post('/Classes', async function(ctx, next) {
 			let rs = await sequelize.query(sql, {
 				replacements: [ctx.request.body.classes]
 			});
-			let rss = rs[0][0];
-			var d = new Date(rss.createtime);
-			let youWant = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
 			await ctx.render('./Assistant/AssistantResult', {
-				rs: rs[0],
-				youWant: youWant
+				rs: rs[0]
 			});
 		} else {
 			ctx.body = '请查询自己的班级';
@@ -49,12 +45,8 @@ router.post('/Classes', async function(ctx, next) {
 			let rs = await sequelize.query(sql, {
 				replacements: [ctx.request.body.classes]
 			});
-			let rss = rs[0][0];
-			var d = new Date(rss.createtime);
-			let youWant = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
 			await ctx.render('./Assistant/AssistantResult', {
-				rs: rs[0],
-				youWant: youWant
+				rs: rs[0]
 			});
 
 		} else {

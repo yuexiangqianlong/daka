@@ -7,6 +7,19 @@ router.get('/adminList', async function(ctx, next) {
 	await ctx.render('./admin/admin', {});
 })
 
+router.get('/addscore', async function(ctx, next) {
+	await ctx.render('./admin/addscore', {});
+})
+
+router.get('/Pointscore', async function(ctx, next) {
+	await ctx.render('./admin/Pointscore', {});
+})
+
+router.get('/adminsearchStudents', async function(ctx, next) {
+	await ctx.render('./admin/adminsearchStudents', {});
+})
+
+
 router.get('/adminClass', async function(ctx, next) {
 	await ctx.render('./admin/adminClass', {});
 })
@@ -57,7 +70,7 @@ router.get('/adminText', async function(ctx, next) {
 		let page = 1; //页数
 		if (ctx.query.page) {
 			page = ctx.query.page;
-}
+		}
 		let pageItem = 3; //每页显示条目数
 		let startPoint = (page - 1) * pageItem; //查询起点位置
 		let rowCount = 0; //总记录数
@@ -130,11 +143,40 @@ router.post('/admincls', async function(ctx, next) {
 		let rs = await sequelize.query(sql, {
 			replacements: [ctx.request.body.classes]
 		});
-		console.log(rs);
 		await ctx.render('./admin/admincls', {
 			rs1: rs1[0],
 			rs: rs[0]
 		});
+	}
+})
+
+router.post('/Pointscore', async function(ctx, next) {
+	let loginbean = ctx.session.loginbean;
+	if (loginbean.role == 0) {
+		let score = ctx.request.body.op - ctx.request.body.score;
+		let sql = "update users set score=?,reason=? where id=?;";
+		let rs = await sequelize.query(sql, {
+			replacements: [score, ctx.request.body.reason, ctx.request.body.pid]
+		});
+		if (rs) {
+			ctx.body = "0"
+		}
+
+	}
+})
+
+router.post('/addscore', async function(ctx, next) {
+	let loginbean = ctx.session.loginbean;
+	if (loginbean.role == 0) {
+		let score = parseInt(ctx.request.body.op) + parseInt(ctx.request.body.score);
+		let sql = "update users set score=? where id=?;";
+		let rs = await sequelize.query(sql, {
+			replacements: [score, ctx.request.body.pid]
+		});
+		if (rs) {
+			ctx.body = "0"
+		}
+
 	}
 })
 module.exports = router

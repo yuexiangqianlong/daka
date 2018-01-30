@@ -30,7 +30,6 @@
  function zero(){
    if(confirm('确定全部置零删除吗?')){
     $.get('./zero',function(data){
-      alert(data);
        $('#body').html(data);
       })
     }

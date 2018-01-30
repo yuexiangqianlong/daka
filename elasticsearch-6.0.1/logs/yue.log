@@ -1,0 +1,104 @@
+[2018-01-08T16:47:22,114][INFO ][o.e.n.Node               ] [slave2] initializing ...
+[2018-01-08T16:47:22,552][INFO ][o.e.e.NodeEnvironment    ] [slave2] using [1] data paths, mounts [[LENOVO (D:)]], net usable_space [33gb], net total_space [113.6gb], types [NTFS]
+[2018-01-08T16:47:22,553][INFO ][o.e.e.NodeEnvironment    ] [slave2] heap size [990.7mb], compressed ordinary object pointers [true]
+[2018-01-08T16:47:23,122][INFO ][o.e.n.Node               ] [slave2] node name [slave2], node ID [ulJ-wPzhS3-9bkxEfo1qFA]
+[2018-01-08T16:47:23,123][INFO ][o.e.n.Node               ] [slave2] version[6.0.1], pid[6348], build[601be4a/2017-12-04T09:29:09.525Z], OS[Windows 8.1/6.3/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_31/25.31-b07]
+[2018-01-08T16:47:23,124][INFO ][o.e.n.Node               ] [slave2] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -XX:+HeapDumpOnOutOfMemoryError, -Delasticsearch, -Des.path.home=D:\tools\elashfenzhi\elasticsearch-6.0.1, -Des.path.conf=D:\tools\elashfenzhi\elasticsearch-6.0.1\config]
+[2018-01-08T16:47:29,916][INFO ][o.e.p.PluginsService     ] [slave2] loaded module [aggs-matrix-stats]
+[2018-01-08T16:47:29,916][INFO ][o.e.p.PluginsService     ] [slave2] loaded module [analysis-common]
+[2018-01-08T16:47:29,917][INFO ][o.e.p.PluginsService     ] [slave2] loaded module [ingest-common]
+[2018-01-08T16:47:29,917][INFO ][o.e.p.PluginsService     ] [slave2] loaded module [lang-expression]
+[2018-01-08T16:47:29,917][INFO ][o.e.p.PluginsService     ] [slave2] loaded module [lang-mustache]
+[2018-01-08T16:47:29,918][INFO ][o.e.p.PluginsService     ] [slave2] loaded module [lang-painless]
+[2018-01-08T16:47:29,919][INFO ][o.e.p.PluginsService     ] [slave2] loaded module [parent-join]
+[2018-01-08T16:47:29,919][INFO ][o.e.p.PluginsService     ] [slave2] loaded module [percolator]
+[2018-01-08T16:47:29,920][INFO ][o.e.p.PluginsService     ] [slave2] loaded module [reindex]
+[2018-01-08T16:47:29,920][INFO ][o.e.p.PluginsService     ] [slave2] loaded module [repository-url]
+[2018-01-08T16:47:29,921][INFO ][o.e.p.PluginsService     ] [slave2] loaded module [transport-netty4]
+[2018-01-08T16:47:29,921][INFO ][o.e.p.PluginsService     ] [slave2] loaded module [tribe]
+[2018-01-08T16:47:29,922][INFO ][o.e.p.PluginsService     ] [slave2] no plugins loaded
+[2018-01-08T16:47:38,869][INFO ][o.e.d.DiscoveryModule    ] [slave2] using discovery type [zen]
+[2018-01-08T16:47:42,106][INFO ][o.e.n.Node               ] [slave2] initialized
+[2018-01-08T16:47:42,107][INFO ][o.e.n.Node               ] [slave2] starting ...
+[2018-01-08T16:47:43,864][INFO ][o.e.t.TransportService   ] [slave2] publish_address {127.0.0.1:9302}, bound_addresses {127.0.0.1:9302}
+[2018-01-08T16:47:47,794][INFO ][o.e.c.s.ClusterApplierService] [slave2] detected_master {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}, added {{master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300},{slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301},}, reason: apply cluster state (from master [master {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300} committed version [25]])
+[2018-01-08T16:47:49,487][INFO ][o.e.h.n.Netty4HttpServerTransport] [slave2] publish_address {127.0.0.1:8000}, bound_addresses {127.0.0.1:8000}
+[2018-01-08T16:47:49,488][INFO ][o.e.n.Node               ] [slave2] started
+[2018-01-08T16:57:54,953][INFO ][o.e.m.j.JvmGcMonitorService] [slave2] [gc][607] overhead, spent [823ms] collecting in the last [1.6s]
+[2018-01-08T16:58:02,991][WARN ][o.e.m.j.JvmGcMonitorService] [slave2] [gc][613] overhead, spent [2.7s] collecting in the last [3s]
+[2018-01-08T16:59:11,312][INFO ][o.e.m.j.JvmGcMonitorService] [slave2] [gc][681] overhead, spent [337ms] collecting in the last [1.2s]
+[2018-01-08T17:54:58,065][WARN ][o.e.t.TransportService   ] [slave2] Received response for a request that has timed out, sent [43364ms] ago, timed out [13364ms] ago, action [internal:discovery/zen/fd/master_ping], node [{master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}], id [3989]
+[2018-01-08T18:03:57,584][WARN ][o.e.m.j.JvmGcMonitorService] [slave2] [gc][young][4349][4] duration [2.5m], collections [1]/[2.6m], total [2.5m]/[2.5m], memory [427.6mb]->[179.2mb]/[990.7mb], all_pools {[young] [266.2mb]->[17.6mb]/[266.2mb]}{[survivor] [33.2mb]->[8.9mb]/[33.2mb]}{[old] [128.1mb]->[152.5mb]/[691.2mb]}
+[2018-01-08T18:03:59,211][WARN ][o.e.m.j.JvmGcMonitorService] [slave2] [gc][4349] overhead, spent [2.5m] collecting in the last [2.6m]
+[2018-01-08T18:05:24,696][INFO ][o.e.d.z.ZenDiscovery     ] [slave2] master_left [{master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}], reason [failed to ping, tried [3] times, each with  maximum [30s] timeout]
+[2018-01-08T18:05:35,087][WARN ][o.e.d.z.ZenDiscovery     ] [slave2] master left (reason = failed to ping, tried [3] times, each with  maximum [30s] timeout), current nodes: nodes: 
+   {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}, master
+   {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}, local
+   {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}
+
+[2018-01-08T18:05:46,765][WARN ][o.e.d.z.UnicastZenPing   ] [slave2] timed out after [5s] resolving host [127.0.0.1]
+[2018-01-08T18:06:37,880][INFO ][o.e.c.s.MasterService    ] [slave2] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}
+[2018-01-08T18:06:53,779][INFO ][o.e.c.s.ClusterApplierService] [slave2] new_master {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}, reason: apply cluster state (from master [master {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302} committed version [34] source [zen-disco-elected-as-master ([0] nodes joined)]])
+[2018-01-08T18:06:55,527][WARN ][o.e.c.s.MasterService    ] [slave2] cluster state update task [zen-disco-elected-as-master ([0] nodes joined)] took [55.5s] above the warn threshold of 30s
+[2018-01-08T18:07:09,860][WARN ][o.e.d.z.ZenDiscovery     ] [slave2] received a request to rejoin the cluster from [66r070b9S3upjwPMaeoIbA], current nodes: nodes: 
+   {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}
+   {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}, local, master
+   {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}
+
+[2018-01-08T18:07:11,190][WARN ][o.e.d.z.ZenDiscovery     ] [slave2] received a request to rejoin the cluster from [66r070b9S3upjwPMaeoIbA], current nodes: nodes: 
+   {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}
+   {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}, local
+   {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}
+
+[2018-01-08T18:07:12,115][WARN ][o.e.d.z.ZenDiscovery     ] [slave2] received a request to rejoin the cluster from [66r070b9S3upjwPMaeoIbA], current nodes: nodes: 
+   {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}
+   {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}, local
+   {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}
+
+[2018-01-08T18:07:13,207][WARN ][o.e.d.z.ZenDiscovery     ] [slave2] received a request to rejoin the cluster from [66r070b9S3upjwPMaeoIbA], current nodes: nodes: 
+   {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}
+   {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}, local
+   {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}
+
+[2018-01-08T18:07:15,804][INFO ][o.e.c.s.MasterService    ] [slave2] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}
+[2018-01-08T18:07:15,700][WARN ][o.e.d.z.ZenDiscovery     ] [slave2] received a request to rejoin the cluster from [66r070b9S3upjwPMaeoIbA], current nodes: nodes: 
+   {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}
+   {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}, local
+   {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}
+
+[2018-01-08T18:07:16,520][WARN ][o.e.d.z.ZenDiscovery     ] [slave2] received a request to rejoin the cluster from [66r070b9S3upjwPMaeoIbA], current nodes: nodes: 
+   {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}
+   {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}, local
+   {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}
+
+[2018-01-08T18:07:17,447][WARN ][o.e.d.z.ZenDiscovery     ] [slave2] received a request to rejoin the cluster from [66r070b9S3upjwPMaeoIbA], current nodes: nodes: 
+   {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}
+   {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}, local
+   {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}
+
+[2018-01-08T18:07:17,448][WARN ][o.e.d.z.ZenDiscovery     ] [slave2] received a request to rejoin the cluster from [66r070b9S3upjwPMaeoIbA], current nodes: nodes: 
+   {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}
+   {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}, local
+   {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}
+
+[2018-01-08T18:07:22,538][INFO ][o.e.c.s.ClusterApplierService] [slave2] new_master {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}, reason: apply cluster state (from master [master {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302} committed version [35] source [zen-disco-elected-as-master ([0] nodes joined)]])
+[2018-01-08T18:07:23,036][WARN ][o.e.t.TransportService   ] [slave2] Received response for a request that has timed out, sent [9934ms] ago, timed out [6183ms] ago, action [internal:discovery/zen/unicast], node [{slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}], id [4338]
+[2018-01-08T18:07:23,574][WARN ][o.e.d.z.ZenDiscovery     ] [slave2] received a request to rejoin the cluster from [66r070b9S3upjwPMaeoIbA], current nodes: nodes: 
+   {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}
+   {slave2}{ulJ-wPzhS3-9bkxEfo1qFA}{1zCcKUusTYSO3Eq80OuQjQ}{127.0.0.1}{127.0.0.1:9302}, local, master
+   {slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}
+
+[2018-01-08T18:07:21,787][WARN ][o.e.d.z.UnicastZenPing   ] [slave2] failed to send ping to [{slave1}{o7HQeShRRuS0OsSaK6ZMzw}{x9M5flqrTCmRQfdEWs5JqQ}{127.0.0.1}{127.0.0.1:9301}]
+org.elasticsearch.transport.ReceiveTimeoutTransportException: [slave1][127.0.0.1:9301][internal:discovery/zen/unicast] request_id [4338] timed out after [3751ms]
+	at org.elasticsearch.transport.TransportService$TimeoutHandler.run(TransportService.java:953) [elasticsearch-6.0.1.jar:6.0.1]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:569) [elasticsearch-6.0.1.jar:6.0.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_31]
+[2018-01-08T18:07:30,287][INFO ][o.e.c.s.ClusterApplierService] [slave2] detected_master {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300}, reason: apply cluster state (from master [master {master}{66r070b9S3upjwPMaeoIbA}{a8OXl3YhTUiIrrA0cihvLw}{127.0.0.1}{127.0.0.1:9300} committed version [41]])
+[2018-01-08T18:14:36,543][WARN ][o.e.m.j.JvmGcMonitorService] [slave2] [gc][young][4950][5] duration [6.1s], collections [1]/[6.8s], total [6.1s]/[2.6m], memory [427.7mb]->[165.9mb]/[990.7mb], all_pools {[young] [266.2mb]->[8mb]/[266.2mb]}{[survivor] [8.9mb]->[5.2mb]/[33.2mb]}{[old] [152.5mb]->[152.5mb]/[691.2mb]}
+[2018-01-08T18:14:36,568][WARN ][o.e.m.j.JvmGcMonitorService] [slave2] [gc][4950] overhead, spent [6.1s] collecting in the last [6.8s]
+[2018-01-08T18:20:38,960][INFO ][o.e.n.Node               ] [slave2] stopping ...
+[2018-01-08T18:20:45,231][INFO ][o.e.n.Node               ] [slave2] stopped
+[2018-01-08T18:20:45,232][INFO ][o.e.n.Node               ] [slave2] closing ...
+[2018-01-08T18:20:46,501][INFO ][o.e.n.Node               ] [slave2] closed

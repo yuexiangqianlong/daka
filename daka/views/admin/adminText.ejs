@@ -1,3 +1,4 @@
+ <div id="ht">
  <!DOCTYPE html>
 <html>
   <head>
@@ -24,8 +25,14 @@
   }
 
   }
+  function gos(){
+    let page=$('.page').val()
+  $.get('./adminText?topic=6&page='+page).then(function(rs){
+    $('#ht').html(rs)
+  })
+  }
  </script>
- <body style='background-color: #9C9C9C'>
+ <body>
  <table class="table">
       <caption>学生答题情况表</caption><a href="./adminList"><button type="button" class="btn btn-danger">返回</button></a> 
       <thead>
@@ -50,8 +57,8 @@
            <td colspan="4" align="center">
            <!-- 转译page他是字符串型 -->
             <ul class=" pagination ">
-            <li><a href="">共<%-rowCount%>条消息</a></li>
-             <li><a href=""> 第<%-page%>/<%-sumpage%>页</a></li>
+            <li><a >共<%-rowCount%>条消息</a></li>
+             <li><a > 第<%-page%>/<%-sumpage%>页</a></li>
               <%if(page>1){%>
              <li><a href="./adminText?page=1&topic=6">首页</a></li>
              <li><a href="./adminText?page=<%-page-1%>&topic=6">上一页</a></li>
@@ -61,12 +68,20 @@
              <li><a href="./adminText?page=<%-page+1%>&topic=6">下一页</a></li>
               <li><a href="./adminText?page=<%-sumpage%>&topic=6">尾页</a></li>
              
-             <%}%>
-            
-             <% for(i=1;i<=sumpage;i++){ %>
-            <li><a href='./adminText?page=<%-i%>&topic=6'><%-i%></a></li>
+             <%}%>                        
+             <li class="nextpagego-box">
+              到&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="page" style="width: 40px" name="goto" id="goto" value="10"/>
+              <%if(page<sumpage) {%>
+              <% for(let i=1;i<=(page+1);i++){ %>
+            <li><a href='./adminText?page=<%-i%>&topic=6'><%-i%></a></li> 
+              <% } %>
+              <% }else{%>
+          <li><a href='./adminText?page=1&topic=6'>返回</a></li> 
+                <%}%>
+              <button type="button" class="btn btn-primary" name="go" onclick="gos()">确定</button>
+            </li>
 
-          <% } %> 
     </table>
     </body>
 </html>
+</div>

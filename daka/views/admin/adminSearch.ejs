@@ -1,0 +1,65 @@
+<script>
+  var op=null;
+  var pid=null;
+  function Pointscore(score,id){
+    $("#myModal").modal();
+    $('#modal-body').load('./Pointscore');
+    op=score;
+    pid=id;
+    }
+    function addscore(score,id){
+    $("#myModal").modal();
+    $('#modal-body').load('./addscore');
+    op=score;
+    pid=id;
+    }
+</script>
+<div class="table-responsive">
+  <table class="table">
+    <caption>学生基本信息</caption>
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>电话</th>
+        <th>班级</th>
+        <th>打卡次数</th>
+        <th>分数</th>
+        <th>上次扣分时间</th>
+        <th>上次扣分原因</th>
+        <th>操作</th></tr>
+    </thead>
+    <tbody>
+      <%result.forEach(function(row){%>
+      <tr>
+        <td><%-row._source.name%></td>
+        <td><%-row._source.phone%></td>
+        <td><%-row._source.classes%></td>
+        <td><%-row._source.frequency%></td>
+        <td><%-row._source.score%></td>
+        <td>
+          <%-row._source.updtime.getFullYear()+'-'+(row._source.updtime.getMonth()+1)+'-'+row._source.updtime.getDate()+' '+(row._source.updtime.getHours()+8)+':'+row._source.updtime.getMinutes()+':'+row._source.updtime.getSeconds()%>
+          </td>
+        <td><%-row._source.reason%></td>
+        <td><button type="button" onclick="Pointscore('<%-row._source.score%>','<%-row._id%>')" class="btn btn-primary">扣分</button></td>
+        <td><button type="button" onclick="addscore('<%-row._source.score%>','<%-row._id%>')" class="btn btn-primary">修改分数</button></td>
+      </tr>
+      <%})%>
+    </tbody>
+  </table>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body" id="modal-body">
+             
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>

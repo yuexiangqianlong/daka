@@ -33,7 +33,7 @@
       <%if(row.text!=null){%>
        <tbody> 
         <td style="text-align: center;font-size: 1em"><%-row.text%></td>
-        <td style="text-align: center;font-size: 1em"><%-youWant%></td>
+        <td style="text-align: center;font-size: 1em"><%-row.createtime.getFullYear()+'年'+(row.createtime.getMonth()+1)+'月'+row.createtime.getDate()+'日'+(row.createtime.getHours()+8)+':'+row.createtime.getMinutes()+':'+row.createtime.getSeconds()%></td>
        </tbody>
         <%}%>
         <%}%>

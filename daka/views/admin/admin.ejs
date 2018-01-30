@@ -25,6 +25,9 @@
   function adminClass(){
 $('#main').load('./adminClass');
   }
+  function adminSearch(){
+   $('#main').load('./adminsearchStudents');
+  }
    </script>
   </head>
   <body  id="body">
@@ -47,7 +50,9 @@ $('#main').load('./adminClass');
         <table height='100%';align='center'>
           <tr><td><a href="#" onclick="adminUser()">打卡情况</a></td></tr>
           <tr><td><a href='#' onclick='topic6()'>学生意见</a></td></tr>
-          <tr><td><a href="#"  onclick='adminClass()''>班级查询</a></td></tr>
+          <tr><td><a href="#"  onclick='adminClass()''>班级查询</a></td>
+           <tr><td><a href="#"  onclick='adminSearch()''>学生信息查询</a></td> 
+          </tr>
         </table>
       </div>
          

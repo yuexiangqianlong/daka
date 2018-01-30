@@ -1,0 +1,47 @@
+ <script type="text/javascript">
+ 	var searchs=null;
+     function searchds(){
+    searchs = $("#search").val();
+    if (searchs) {
+    	$("#s-t").show()
+    	  $('#codess').attr("disabled","disabled");
+          $('#codess').text('1分钟后点击查询');
+         
+          setTimeout(shows, 60000);
+          function shows(){
+            $('#codess').removeAttr("disabled","disabled");
+            $('#codess').text('查询');
+          }
+    	$.get('/suggest/'+searchs,function(rs){
+        $("#main").html(rs)
+    })
+    }else{
+    	alert("请输入学生姓名")
+    }
+    
+      }
+   </script>
+  </head>
+  <body id="body">
+   <form class="bs-example bs-example-form" id="assisForm" role="assisForm" name='assisForm' method="post" onsubmit=" return subInfo();">
+        <div class="row" style="margin-top: 30%;margin-left: 20%">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">请输入学生姓名：</button>
+                    </span>
+                    <input type="text" id="search" name="search" class="form-control" placeholder="查询学生基本信息">
+                    
+                </div><!-- /input-group -->
+                <div> <button type="button" onclick="searchds()" class="btn btn-primary" style="margin-left: 100%; width: 30%;margin-top: -15%" id="codess" >查询</button>
+                	<p id="s-t" style="padding-left: 136px; color: red;display: none;" >查询中请稍等</p>
+                </div>
+                <p style=" padding-left: 136px;color: red">注意：查询用法<br/>1.搜索引擎会每分钟更新一次数据，但是对一个人一分钟只等操作一次<br/>
+                2.查询班级时请直接查询几班，不同加全栈，<br/>
+                例如：全栈10班，请查询：“10班”就行<br/>
+               3.本搜索引擎可查询姓名、电话、分数、打卡次数以及班级</p>
+
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </form>
+</div>
